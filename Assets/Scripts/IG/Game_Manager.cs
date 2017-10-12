@@ -8,6 +8,7 @@ public class Game_Manager : MonoBehaviour {
 	private bool isSelectionActive = false;
 	private string actualTag ;
 	private int actualMatchs = 0 ;
+	public GameObject mus;
 
 
 	// Use this for initialization
@@ -16,18 +17,34 @@ public class Game_Manager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		MaxMatchs();
+		Debug.Log(actualMatchs);
 	}
 	public void OnClickRune (Button button)
 	{
-		if (isSelectionActive == false)
+		if (isSelectionActive == true && actualMatchs < 3)
+		{
+			if (actualTag == button.tag)
+			{
+				actualMatchs += 1;
+				button.interactable = false;
+			}
+
+		}
+		if (isSelectionActive == false && actualMatchs == 0)
 		{
 			actualTag = button.tag;
 			actualMatchs += 1;
 			isSelectionActive = true;
 			button.interactable = false;
 		}
-		if (isSelectionActive == true)
 		Debug.Log(actualTag);
+	}
+	public void MaxMatchs ()
+	{
+		if (actualMatchs >= 3)
+		{
+			mus.SetActive(false);
+		}
 	}
 }
