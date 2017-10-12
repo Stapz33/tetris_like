@@ -8,20 +8,8 @@ public class Shuffle_Manager : MonoBehaviour {
 
 	public List<GameObject> tmpSlots = new List<GameObject>();
 
-	// public GameObject slot2;
-	// public GameObject slot3;
-	// public GameObject slot4;
-	// public GameObject slot1;
-	// public GameObject slot5;
-	// public GameObject slot6;
-	// public GameObject slot7;
-	// public GameObject slot8;
-	// public GameObject slot9;
 
-	// public GameObject[] tmpSlots;
-	// Use this for initialization
 	void Start () {
-		// tmpSlots = new GameObject[8];
 		ShuffleManager();
 	}
 	
@@ -31,9 +19,18 @@ public class Shuffle_Manager : MonoBehaviour {
 	}
 
 	void ShuffleManager(){
-		// for (i = 0; i < 9; i++){
-		// 	tmpSlots.Add(slots[0]);
-		// }
-		
+		for (int i = 0; i < 9; i++){
+			tmpSlots.Add(slots[0]);
+		}
+		for (int y = 0; y < 9; y++){
+			int tmp = Random.Range(0, 9);
+			if (tmpSlots[tmp] !=null){
+				slots[y] = tmpSlots[tmp];
+				tmpSlots[tmp]=null;
+			} else {
+				y--;
+			}
+		}
+		tmpSlots = null;
 	}
 }
