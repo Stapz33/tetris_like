@@ -11,6 +11,11 @@ public class Game_Manager : MonoBehaviour {
 	public GameObject mus;
 	private string shapeTag;
 	public GameObject spawnManager;
+	public Image playerHp;
+	public Image ennemyHp;
+	public Image ennemyShield;
+	public GameObject loseImage;
+	public int lifeLostPerSeconds;
 	private static Game_Manager instance ;
     public static Game_Manager Instance () 
     {
@@ -38,8 +43,11 @@ void Awake ()
 	void Update () {
 		Debug.Log(actualTag);
 		MaxMatchs();
+		CooldownPlayerHp();
 	}
+
 	public void OnClickRune (GameObject shapeInUse)
+
 	{
 		shapeTag = shapeInUse.tag;
 		if (isSelectionActive && actualMatchs < 3)
@@ -60,13 +68,64 @@ void Awake ()
 		}
 		Debug.Log(actualTag);
 	}
+
 	public void MaxMatchs ()
+
 	{
 		if (actualMatchs >= 3)
 		{
 			mus.SetActive(false);
-			spawnManager.GetComponent<Spawn_Manager>().RndIdx();
+			if (actualTag == "Cube")
+			{
+				PlayerHpBar();
+				actualTag = null;
+			}
+			if (actualTag == "Triangle")
+			{
+				EnnemyHpBar();
+				actualTag = null;
+			}
+			if (actualTag == "Circle")
+			{
+				EnnemyShieldBar();
+				actualTag = null;
+			}
 
 		}
+	}
+
+	public void PlayerHpBar ()
+
+	{
+		playerHp.fillAmount += 0.2f;
+	}
+
+	public void CooldownPlayerHp ()
+
+	{
+		playerHp.fillAmount -= Time.deltaTime / lifeLostPerSeconds;
+		if (playerHp.fillAmount == 0f)
+		{
+			loseImage.SetActive(true);
+		}
+	}
+
+	public void EnnemyHpBar ()
+
+	{
+		if (ennemyShield.fillAmount > 0)
+			{
+				ennemyHp.fillAmount -= 0.1f;
+			}
+		if (ennemyShield.fillAmount == 0)
+			{
+				ennemyHp.fillAmount -= 0.5f;
+			}
+	}
+
+	public void EnnemyShieldBar ()
+
+	{
+		ennemyShield.fillAmount -= 0.2f;
 	}
 }
