@@ -10,6 +10,7 @@ public class Victory_Defeat : MonoBehaviour {
 	public float enemyHP;
 	public float playerHP;
 	public bool isGameEnded = false;
+	public GameObject endGameVictory;
 
 	// Use this for initialization
 	void Start () {
