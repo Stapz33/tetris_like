@@ -51,8 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848f61a8f5a26b74bb749682ce44176b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnParent: {fileID: 224231879153179196, guid: 21de1c25434f43642b4e1a4acb2da45f,
-    type: 2}
+  spawnParent: {fileID: 0}
   circle: {fileID: 1698962760445882, guid: 6aa520dd02443e147849192aa947b7dd, type: 2}
   cube: {fileID: 1644335193080052, guid: 9c739463128ca7f4189c95a911b34309, type: 2}
   triangle: {fileID: 1686132379899998, guid: 4f9e79dcf176b974eb9293af5ab8a92f, type: 2}

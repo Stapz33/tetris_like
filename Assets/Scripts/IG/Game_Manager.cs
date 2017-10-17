@@ -6,22 +6,38 @@ using UnityEngine.UI;
 public class Game_Manager : MonoBehaviour {
 
 	private bool isSelectionActive = false;
+
 	private string actualTag ;
-	private int actualMatchs = 0 ;
-	public GameObject mus;
 	private string shapeTag;
-	public GameObject spawnManager;
+
 	public Image playerHp;
 	public Image ennemyHp;
 	public Image ennemyShield;
+
+	public GameObject spawnManager;
 	public GameObject loseImage;
+	public GameObject winImage;
+
+	private int actualMatchs = 0 ;
 	public int lifeLostPerSeconds;
+
+	public float hitEnnemyWithShield;
+	public float hitEnnemyWithoutShield;
+	public float ennemyShieldPerHit;
+	public float ennemyShieldRecover;
+	public float timerInSeconds;
+	private float tmpTimer;
+
+	public Text timer;
+
 	private static Game_Manager instance ;
     public static Game_Manager Instance () 
     {
         return instance;
     }
+
 void Awake ()
+
     {
         if (instance != null)
         {
@@ -36,7 +52,7 @@ void Awake ()
 
 	// Use this for initialization
 	void Start () {
-
+		tmpTimer = timerInSeconds;
 	}
 	
 	// Update is called once per frame
@@ -44,6 +60,8 @@ void Awake ()
 		Debug.Log(actualTag);
 		MaxMatchs();
 		CooldownPlayerHp();
+		VictoryOrDefeat();
+		CooldownTimer();
 	}
 
 	public void OnClickRune (GameObject shapeInUse)
@@ -74,7 +92,6 @@ void Awake ()
 	{
 		if (actualMatchs >= 3)
 		{
-			mus.SetActive(false);
 			if (actualTag == "Cube")
 			{
 				PlayerHpBar();
@@ -104,10 +121,6 @@ void Awake ()
 
 	{
 		playerHp.fillAmount -= Time.deltaTime / lifeLostPerSeconds;
-		if (playerHp.fillAmount == 0f)
-		{
-			loseImage.SetActive(true);
-		}
 	}
 
 	public void EnnemyHpBar ()
@@ -115,17 +128,50 @@ void Awake ()
 	{
 		if (ennemyShield.fillAmount > 0)
 			{
-				ennemyHp.fillAmount -= 0.1f;
+				ennemyHp.fillAmount -= hitEnnemyWithShield;
 			}
 		if (ennemyShield.fillAmount == 0)
 			{
-				ennemyHp.fillAmount -= 0.5f;
+				ennemyHp.fillAmount -= hitEnnemyWithoutShield;
 			}
 	}
 
 	public void EnnemyShieldBar ()
 
 	{
-		ennemyShield.fillAmount -= 0.2f;
+		ennemyShield.fillAmount -= ennemyShieldPerHit;
+	}
+
+	public void VictoryOrDefeat ()
+	{
+		if (playerHp.fillAmount == 0f)
+		{
+			loseImage.SetActive(true);
+		}
+		if (ennemyHp.fillAmount == 0f)
+		{
+			winImage.SetActive(true);
+
+		}
+	}
+
+	public void ResetTimer()  // remettre a la valeur de depart le timer, et rempli le shield
+
+	{
+		// respawn shapes ICI !
+		Debug.Log("Reset");
+		ennemyShield.fillAmount += ennemyShieldRecover;
+		tmpTimer = timerInSeconds;
+	}
+
+	public void CooldownTimer()
+
+	{
+		tmpTimer -= Time.deltaTime;
+		timer.text = tmpTimer.ToString("F2") + "s";
+		if (tmpTimer <= 0.0f)
+		{
+			ResetTimer();
+		}
 	}
 }

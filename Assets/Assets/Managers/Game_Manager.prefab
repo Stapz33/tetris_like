@@ -51,4 +51,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bed10ce381d9e4fbe5dfe2c4d65fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mus: {fileID: 0}
+  playerHp: {fileID: 0}
+  ennemyHp: {fileID: 0}
+  ennemyShield: {fileID: 0}
+  spawnManager: {fileID: 0}
+  loseImage: {fileID: 0}
+  winImage: {fileID: 0}
+  lifeLostPerSeconds: 10
+  hitEnnemyWithShield: 0.1
+  hitEnnemyWithoutShield: 0.3
+  ennemyShieldPerHit: 0.2
+  ennemyShieldRecover: 0.2
+  timerInSeconds: 5
+  timer: {fileID: 0}
