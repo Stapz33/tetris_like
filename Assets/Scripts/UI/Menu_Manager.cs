@@ -5,6 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class Menu_Manager : MonoBehaviour {
 
+	public GameObject boardLevels;
+	public GameObject mainMenu;
+	public GameObject winMenu;
+	public GameObject loseMenu;
+
+	private static Menu_Manager instance ;
+    public static Menu_Manager Instance () 
+    {
+        return instance;
+    }
+
+void Awake ()
+
+    {
+        if (instance != null)
+        {
+            Destroy (gameObject);
+        }
+        else 
+        {
+            instance = this;
+        }
+    }
 
 
 	// Use this for initialization
@@ -18,12 +41,34 @@ public class Menu_Manager : MonoBehaviour {
 	}
 
 	public void PlayOnClick(){
-		SceneManager.LoadScene("Killian_Test");
+		mainMenu.SetActive(false);
+		boardLevels.SetActive(true);
+		loseMenu.SetActive(false);
+		winMenu.SetActive(false);
 		//renseigner le bon nom de scene
 	}
 
 	public void QuitOnClick(){
 		Application.Quit();
 		Debug.Log("Quit");
+	}
+
+	public void ReturnToMenu(){
+		boardLevels.SetActive(false);
+		mainMenu.SetActive(true);
+		loseMenu.SetActive(false);
+		winMenu.SetActive(false);
+
+	}
+	public void DispWin (){
+		boardLevels.SetActive(false);
+		mainMenu.SetActive(false);
+		loseMenu.SetActive(false);
+	}
+
+	public void DispLose (){
+		boardLevels.SetActive(false);
+		mainMenu.SetActive(false);
+		winMenu.SetActive(false);
 	}
 }

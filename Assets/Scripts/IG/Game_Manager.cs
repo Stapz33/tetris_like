@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Game_Manager : MonoBehaviour {
 
@@ -15,8 +16,7 @@ public class Game_Manager : MonoBehaviour {
 	public Image ennemyShield;
 
 	public GameObject spawnManager;
-	public GameObject loseImage;
-	public GameObject winImage;
+	public GameObject[] despawns;
 
 	private int actualMatchs = 0 ;
 	public int lifeLostPerSeconds;
@@ -57,7 +57,6 @@ void Awake ()
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(actualTag);
 		MaxMatchs();
 		CooldownPlayerHp();
 		VictoryOrDefeat();
@@ -84,12 +83,12 @@ void Awake ()
 			isSelectionActive = true;
 			shapeInUse.GetComponent<Button>().interactable = false;
 		}
-		Debug.Log(actualTag);
 	}
 
 	public void MaxMatchs ()
 
 	{
+		Debug.Log(actualMatchs);
 		if (actualMatchs >= 3)
 		{
 			if (actualTag == "Cube")
@@ -107,6 +106,11 @@ void Awake ()
 				EnnemyShieldBar();
 				actualTag = null;
 			}
+			Spawn_Manager.Instance().UnSpawnForms();
+			Spawn_Manager.Instance().StartingIdx();
+			actualMatchs = 0;
+			isSelectionActive = false;
+			ResetTimer();
 
 		}
 	}
@@ -146,12 +150,13 @@ void Awake ()
 	{
 		if (playerHp.fillAmount == 0f)
 		{
-			loseImage.SetActive(true);
+			SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
+			Menu_Manager.Instance().DispWin();
 		}
 		if (ennemyHp.fillAmount == 0f)
 		{
-			winImage.SetActive(true);
-
+			SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
+			Menu_Manager.Instance().DispLose();
 		}
 	}
 
@@ -159,8 +164,6 @@ void Awake ()
 
 	{
 		// respawn shapes ICI !
-		Debug.Log("Reset");
-		ennemyShield.fillAmount += ennemyShieldRecover;
 		tmpTimer = timerInSeconds;
 	}
 
@@ -171,7 +174,9 @@ void Awake ()
 		timer.text = tmpTimer.ToString("F2") + "s";
 		if (tmpTimer <= 0.0f)
 		{
+			tmpTimer = 0;
 			ResetTimer();
+			ennemyShield.fillAmount += ennemyShieldRecover;
 		}
 	}
 }
