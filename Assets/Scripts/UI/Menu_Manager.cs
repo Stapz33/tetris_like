@@ -67,14 +67,19 @@ void Awake ()
 		boardLevels.SetActive(false);
 		mainMenu.SetActive(false);
 		loseMenu.SetActive(false);
+		winMenu.SetActive(true);
 	}
 
 	public void DispLose (){
 		boardLevels.SetActive(false);
 		mainMenu.SetActive(false);
 		winMenu.SetActive(false);
+		loseMenu.SetActive(true);
 	}
 	public void LvlOne (){
-
+		SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
+	}
+	public void LvlTwo (){
+		SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
 	}
 }
