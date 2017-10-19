@@ -7,8 +7,6 @@ public class Menu_Manager : MonoBehaviour {
 
 	public GameObject boardLevels;
 	public GameObject mainMenu;
-	public GameObject winMenu;
-	public GameObject loseMenu;
 	public GameObject askTuto;
 	public GameObject tutoOne;
 	public GameObject tutoTwo;
@@ -46,8 +44,6 @@ void Awake ()
 	public void PlayOnClick(){
 		mainMenu.SetActive(false);
 		boardLevels.SetActive(true);
-		loseMenu.SetActive(false);
-		winMenu.SetActive(false);
 		//renseigner le bon nom de scene
 	}
 
@@ -59,27 +55,26 @@ void Awake ()
 	public void ReturnToMenu(){
 		boardLevels.SetActive(false);
 		mainMenu.SetActive(true);
-		loseMenu.SetActive(false);
-		winMenu.SetActive(false);
 
-	}
-	public void DispWin (){
-		boardLevels.SetActive(false);
-		mainMenu.SetActive(false);
-		loseMenu.SetActive(false);
-		winMenu.SetActive(true);
-	}
-
-	public void DispLose (){
-		boardLevels.SetActive(false);
-		mainMenu.SetActive(false);
-		winMenu.SetActive(false);
-		loseMenu.SetActive(true);
 	}
 	public void LvlOne (){
-		SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
+		askTuto.SetActive(true);
 	}
 	public void LvlTwo (){
 		SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+	}
+	public void YesToTuto(){
+		askTuto.SetActive(false);
+		tutoOne.SetActive(true);
+	}
+	public void NoToTuto(){
+		EndTuto();
+	}
+	public void NextTuto(){
+		tutoOne.SetActive(false);
+		tutoTwo.SetActive(true);
+	}
+	public void EndTuto(){
+		SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
 	}
 }

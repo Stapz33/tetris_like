@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Game_Manager : MonoBehaviour {
+public class Tuto_Manager : MonoBehaviour {
 
 	private bool isSelectionActive = false;
 	private bool endGame = false;
@@ -31,8 +31,8 @@ public class Game_Manager : MonoBehaviour {
 
 	public Text timer;
 
-	private static Game_Manager instance ;
-    public static Game_Manager Instance () 
+	private static Tuto_Manager instance ;
+    public static Tuto_Manager Instance () 
     {
         return instance;
     }
