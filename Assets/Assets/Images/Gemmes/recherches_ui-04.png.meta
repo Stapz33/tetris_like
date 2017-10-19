@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: 0222de57a7fe6ab4a86c140700c97de6
+timeCreated: 1508401593
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Gemme_Bleue
+    21300002: Gemme_Verte
+    21300004: Gemme_Rouge
+    21300006: Gemme_Bleue_Selec
+    21300008: Gemme_Verte_Selec
+    21300010: Gemme_rouge_Selec
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapU: 1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gemme_Bleue
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 2359
+        width: 572
+        height: 589
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 209.46191, y: 139.30771}
+        - {x: 93.99413, y: 212.80167}
+        - {x: 59.003895, y: 221.55093}
+        - {x: -89.704605, y: 221.55093}
+        - {x: -212.17043, y: 167.3054}
+        - {x: -236.66359, y: 83.312325}
+        - {x: -236.66359, y: -119.67096}
+        - {x: -173.68117, y: -233.41159}
+        - {x: -105.45021, y: -247.41045}
+        - {x: -35.469738, y: -247.41045}
+        - {x: -28.471691, y: -242.16087}
+        - {x: -14.475597, y: -247.41045}
+        - {x: 109.73974, y: -247.41045}
+        - {x: 233.95508, y: -177.41621}
+        - {x: 233.95508, y: 104.31059}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Verte
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 2376
+        width: 522
+        height: 493
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 167.66113, y: 219.30254}
+        - {x: -178.74219, y: 219.30254}
+        - {x: -238.2256, y: 109.06161}
+        - {x: -238.2256, y: -64.174126}
+        - {x: -183.99072, y: -226.91072}
+        - {x: 172.90967, y: -226.91072}
+        - {x: 246.38916, y: -88.67211}
+        - {x: 246.38916, y: 68.81492}
+        - {x: 213.14844, y: 217.55267}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Rouge
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 2389
+        width: 569
+        height: 487
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -80.353035, y: 232.30255}
+        - {x: -276.29834, y: -112.41906}
+        - {x: -276.29834, y: -147.41617}
+        - {x: -223.813, y: -220.91013}
+        - {x: 204.81738, y: -220.91013}
+        - {x: 257.30273, y: -191.16257}
+        - {x: 257.30273, y: -121.168335}
+        - {x: 127.83887, y: 232.30255}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Bleue_Selec
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1697
+        width: 599
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -92.94922, y: 255.11871}
+        - {x: -250.40527, y: 169.37578}
+        - {x: -267.9004, y: 151.87721}
+        - {x: -267.9004, y: -154.34756}
+        - {x: -169.92773, y: -275.08762}
+        - {x: 199.21924, y: -275.08762}
+        - {x: 256.95312, y: -231.34123}
+        - {x: 256.95312, y: 200.87318}
+        - {x: 116.992195, y: 255.11871}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Verte_Selec
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1664
+        width: 566
+        height: 574
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -187.12184, y: 250.99133}
+        - {x: -272.8479, y: 58.507175}
+        - {x: -272.8479, y: -28.98562}
+        - {x: -185.37233, y: -242.46805}
+        - {x: 203.01929, y: -242.46805}
+        - {x: 272.99976, y: -13.236917}
+        - {x: 272.99976, y: 95.25415}
+        - {x: 182.02515, y: 250.99133}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_rouge_Selec
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 1639
+        width: 629
+        height: 599
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 89.590294, y: 283.7366}
+        - {x: -139.59575, y: 283.7366}
+        - {x: -314.5, y: -62.734856}
+        - {x: -314.5, y: -165.97635}
+        - {x: -279.5567, y: -248.21957}
+        - {x: 241.79782, y: -248.21957}
+        - {x: 303.03073, y: -155.47722}
+        - {x: 303.03073, y: -88.9827}
+        - {x: 177.06589, y: 259.23865}
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
