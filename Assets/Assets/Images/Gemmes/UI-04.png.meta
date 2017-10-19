@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 0222de57a7fe6ab4a86c140700c97de6
-timeCreated: 1508401842
+guid: 8e8f4d690cfbef245accf29f530bfc1e
+timeCreated: 1508402746
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,7 +9,12 @@ TextureImporter:
     21300004: Gemme_Rouge
     21300006: Gemme_Bleue_Selec
     21300008: Gemme_Verte_Selec
-    21300010: Gemme_rouge_Selec
+    21300010: Gemme_Rouge_Selec
+    21300012: Img_Vie_Ennemi
+    21300014: Img_Bouclier_Ennemi
+    21300016: Img_Vie_Joueur
+    21300018: Img_Contour_Ennemi
+    21300020: Img_Contour_Joueur
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -37,7 +42,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
     wrapU: 1
     wrapV: -1
@@ -97,24 +102,9 @@ TextureImporter:
         width: 465
         height: 463
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 209.46191, y: 139.30771}
-        - {x: 93.99413, y: 212.80167}
-        - {x: 59.003895, y: 221.55093}
-        - {x: -89.704605, y: 221.55093}
-        - {x: -212.17043, y: 167.3054}
-        - {x: -236.66359, y: 83.312325}
-        - {x: -236.66359, y: -119.67096}
-        - {x: -173.68117, y: -233.41159}
-        - {x: -105.45021, y: -247.41045}
-        - {x: -35.469738, y: -247.41045}
-        - {x: -28.471691, y: -242.16087}
-        - {x: -14.475597, y: -247.41045}
-        - {x: 109.73974, y: -247.41045}
-        - {x: 233.95508, y: -177.41621}
-        - {x: 233.95508, y: 104.31059}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -126,40 +116,23 @@ TextureImporter:
         width: 479
         height: 441
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 167.66113, y: 219.30254}
-        - {x: -178.74219, y: 219.30254}
-        - {x: -238.2256, y: 109.06161}
-        - {x: -238.2256, y: -64.174126}
-        - {x: -183.99072, y: -226.91072}
-        - {x: 172.90967, y: -226.91072}
-        - {x: 246.38916, y: -88.67211}
-        - {x: 246.38916, y: 68.81492}
-        - {x: 213.14844, y: 217.55267}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Gemme_Rouge
       rect:
         serializedVersion: 2
-        x: 1353
+        x: 1354
         y: 2415
-        width: 527
+        width: 526
         height: 447
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -80.353035, y: 232.30255}
-        - {x: -276.29834, y: -112.41906}
-        - {x: -276.29834, y: -147.41617}
-        - {x: -223.813, y: -220.91013}
-        - {x: 204.81738, y: -220.91013}
-        - {x: 257.30273, y: -191.16257}
-        - {x: 257.30273, y: -121.168335}
-        - {x: 127.83887, y: 232.30255}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -171,18 +144,9 @@ TextureImporter:
         width: 519
         height: 525
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -92.94922, y: 255.11871}
-        - {x: -250.40527, y: 169.37578}
-        - {x: -267.9004, y: 151.87721}
-        - {x: -267.9004, y: -154.34756}
-        - {x: -169.92773, y: -275.08762}
-        - {x: 199.21924, y: -275.08762}
-        - {x: 256.95312, y: -231.34123}
-        - {x: 256.95312, y: 200.87318}
-        - {x: 116.992195, y: 255.11871}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -194,40 +158,93 @@ TextureImporter:
         width: 541
         height: 488
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -187.12184, y: 250.99133}
-        - {x: -272.8479, y: 58.507175}
-        - {x: -272.8479, y: -28.98562}
-        - {x: -185.37233, y: -242.46805}
-        - {x: 203.01929, y: -242.46805}
-        - {x: 272.99976, y: -13.236917}
-        - {x: 272.99976, y: 95.25415}
-        - {x: 182.02515, y: 250.99133}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Gemme_rouge_Selec
+      name: Gemme_Rouge_Selec
       rect:
         serializedVersion: 2
-        x: 1309
+        x: 1308
         y: 1691
-        width: 615
+        width: 616
         height: 527
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 89.590294, y: 283.7366}
-        - {x: -139.59575, y: 283.7366}
-        - {x: -314.5, y: -62.734856}
-        - {x: -314.5, y: -165.97635}
-        - {x: -279.5567, y: -248.21957}
-        - {x: 241.79782, y: -248.21957}
-        - {x: 303.03073, y: -155.47722}
-        - {x: 303.03073, y: -88.9827}
-        - {x: 177.06589, y: 259.23865}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Vie_Ennemi
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1278
+        width: 1618
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Bouclier_Ennemi
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1005
+        width: 1618
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Vie_Joueur
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 676
+        width: 1628
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Contour_Ennemi
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 1259
+        width: 1649
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Contour_Joueur
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 923
+        width: 1661
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
     outline: []
