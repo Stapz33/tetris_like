@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8e8f4d690cfbef245accf29f530bfc1e
-timeCreated: 1508402746
+guid: 420e0dc269cb2234c95e135da9319fd9
+timeCreated: 1508424796
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,11 +10,11 @@ TextureImporter:
     21300006: Gemme_Bleue_Selec
     21300008: Gemme_Verte_Selec
     21300010: Gemme_Rouge_Selec
-    21300012: Img_Vie_Ennemi
-    21300014: Img_Bouclier_Ennemi
-    21300016: Img_Vie_Joueur
-    21300018: Img_Contour_Ennemi
-    21300020: Img_Contour_Joueur
+    21300012: Barre_Vie_Ennemi
+    21300014: Barre_Shield_Ennemi
+    21300016: Barre_Vie_Joueu
+    21300018: Contour_Barre_Ennemi
+    21300020: Contour_Barre_Joueur
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -97,10 +97,10 @@ TextureImporter:
       name: Gemme_Bleue
       rect:
         serializedVersion: 2
-        x: 123
-        y: 2409
-        width: 465
-        height: 463
+        x: 180
+        y: 3705
+        width: 468
+        height: 466
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,10 +111,10 @@ TextureImporter:
       name: Gemme_Verte
       rect:
         serializedVersion: 2
-        x: 769
-        y: 2396
-        width: 479
-        height: 441
+        x: 826
+        y: 3692
+        width: 480
+        height: 445
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,10 +125,10 @@ TextureImporter:
       name: Gemme_Rouge
       rect:
         serializedVersion: 2
-        x: 1354
-        y: 2415
-        width: 526
-        height: 447
+        x: 1409
+        y: 3712
+        width: 531
+        height: 448
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,10 +139,10 @@ TextureImporter:
       name: Gemme_Bleue_Selec
       rect:
         serializedVersion: 2
-        x: 122
-        y: 1700
-        width: 519
-        height: 525
+        x: 128
+        y: 3026
+        width: 557
+        height: 551
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: Gemme_Verte_Selec
       rect:
         serializedVersion: 2
-        x: 732
-        y: 1709
-        width: 541
-        height: 488
+        x: 794
+        y: 3037
+        width: 578
+        height: 517
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,10 +167,10 @@ TextureImporter:
       name: Gemme_Rouge_Selec
       rect:
         serializedVersion: 2
-        x: 1308
-        y: 1691
-        width: 616
-        height: 527
+        x: 1501
+        y: 3017
+        width: 669
+        height: 577
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,13 +178,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Img_Vie_Ennemi
+      name: Barre_Vie_Ennemi
       rect:
         serializedVersion: 2
-        x: 157
-        y: 1278
-        width: 1618
-        height: 158
+        x: 211
+        y: 2578
+        width: 1623
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,13 +192,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Img_Bouclier_Ennemi
+      name: Barre_Shield_Ennemi
       rect:
         serializedVersion: 2
-        x: 157
-        y: 1005
-        width: 1618
-        height: 158
+        x: 211
+        y: 2302
+        width: 1623
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,13 +206,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Img_Vie_Joueur
+      name: Barre_Vie_Joueu
       rect:
         serializedVersion: 2
-        x: 150
-        y: 676
-        width: 1628
-        height: 202
+        x: 148
+        y: 1951
+        width: 1738
+        height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,13 +220,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Img_Contour_Ennemi
+      name: Contour_Barre_Ennemi
       rect:
         serializedVersion: 2
-        x: 1882
-        y: 1259
-        width: 1649
-        height: 192
+        x: 1938
+        y: 2557
+        width: 1654
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,13 +234,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Img_Contour_Joueur
+      name: Contour_Barre_Joueur
       rect:
         serializedVersion: 2
-        x: 1876
-        y: 923
-        width: 1661
-        height: 227
+        x: 1932
+        y: 2221
+        width: 1663
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
