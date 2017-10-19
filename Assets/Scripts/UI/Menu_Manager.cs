@@ -9,6 +9,9 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject mainMenu;
 	public GameObject winMenu;
 	public GameObject loseMenu;
+	public GameObject askTuto;
+	public GameObject tutoOne;
+	public GameObject tutoTwo;
 
 	private static Menu_Manager instance ;
     public static Menu_Manager Instance () 
@@ -70,5 +73,8 @@ void Awake ()
 		boardLevels.SetActive(false);
 		mainMenu.SetActive(false);
 		winMenu.SetActive(false);
+	}
+	public void LvlOne (){
+
 	}
 }

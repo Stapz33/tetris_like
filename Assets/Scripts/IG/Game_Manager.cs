@@ -151,12 +151,12 @@ void Awake ()
 		if (playerHp.fillAmount == 0f)
 		{
 			SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
-			Menu_Manager.Instance().DispWin();
+			Menu_Manager.Instance().DispLose();
 		}
 		if (ennemyHp.fillAmount == 0f)
 		{
 			SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
-			Menu_Manager.Instance().DispLose();
+			Menu_Manager.Instance().DispWin();
 		}
 	}
 
