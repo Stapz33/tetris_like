@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0222de57a7fe6ab4a86c140700c97de6
-timeCreated: 1508401593
+timeCreated: 1508401842
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -92,10 +92,10 @@ TextureImporter:
       name: Gemme_Bleue
       rect:
         serializedVersion: 2
-        x: 73
-        y: 2359
-        width: 572
-        height: 589
+        x: 123
+        y: 2409
+        width: 465
+        height: 463
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,10 +121,10 @@ TextureImporter:
       name: Gemme_Verte
       rect:
         serializedVersion: 2
-        x: 745
-        y: 2376
-        width: 522
-        height: 493
+        x: 769
+        y: 2396
+        width: 479
+        height: 441
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,10 +144,10 @@ TextureImporter:
       name: Gemme_Rouge
       rect:
         serializedVersion: 2
-        x: 1342
-        y: 2389
-        width: 569
-        height: 487
+        x: 1353
+        y: 2415
+        width: 527
+        height: 447
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: Gemme_Bleue_Selec
       rect:
         serializedVersion: 2
-        x: 89
-        y: 1697
-        width: 599
-        height: 554
+        x: 122
+        y: 1700
+        width: 519
+        height: 525
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: Gemme_Verte_Selec
       rect:
         serializedVersion: 2
-        x: 720
-        y: 1664
-        width: 566
-        height: 574
+        x: 732
+        y: 1709
+        width: 541
+        height: 488
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,9 +212,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1309
-        y: 1639
-        width: 629
-        height: 599
+        y: 1691
+        width: 615
+        height: 527
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
