@@ -10,6 +10,7 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject askTuto;
 	public GameObject tutoOne;
 	public GameObject tutoTwo;
+	public GameObject acceuilPanel;
 
 	private static Menu_Manager instance ;
     public static Menu_Manager Instance () 
@@ -83,6 +84,10 @@ void Awake ()
 		mainMenu.SetActive(false);
 		tutoTwo.SetActive(false);
 
+	}
+	public void AcceuilToMenu()
+	{
+		acceuilPanel.SetActive(false);
 	}
 
 }
