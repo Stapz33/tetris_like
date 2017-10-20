@@ -55,11 +55,22 @@ MonoBehaviour:
   ennemyHp: {fileID: 0}
   ennemyShield: {fileID: 0}
   winPanel: {fileID: 0}
-  losePanel: {fileID: 0}
+  tutoHpPanel1: {fileID: 0}
+  tutoHpPanel2: {fileID: 0}
+  tutoBravo2: {fileID: 0}
+  tutoBravo3: {fileID: 0}
+  tutoBravo1: {fileID: 0}
+  tutoEnnemyPanel1: {fileID: 0}
+  tutoShieldPanel1: {fileID: 0}
+  tutoEnnemyPanel2: {fileID: 0}
+  tutoShieldPanel2: {fileID: 0}
+  tutoFinalEnnemy: {fileID: 0}
+  tutoTimer: {fileID: 0}
+  tutoFinalPanel: {fileID: 0}
   lifeLostPerSeconds: 10
   hitEnnemyWithShield: 0.1
   hitEnnemyWithoutShield: 0.3
-  ennemyShieldPerHit: 0.2
+  ennemyShieldPerHit: 1
   ennemyShieldRecover: 0.2
-  timerInSeconds: 5
+  timerInSeconds: 8
   timer: {fileID: 0}

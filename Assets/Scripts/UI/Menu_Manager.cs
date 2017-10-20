@@ -68,13 +68,14 @@ void Awake ()
 		tutoOne.SetActive(true);
 	}
 	public void NoToTuto(){
-		EndTuto();
+		SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
 	}
 	public void NextTuto(){
 		tutoOne.SetActive(false);
 		tutoTwo.SetActive(true);
 	}
 	public void EndTuto(){
-		SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
+		SceneManager.LoadScene("LVLT_Scene", LoadSceneMode.Single);
 	}
+
 }

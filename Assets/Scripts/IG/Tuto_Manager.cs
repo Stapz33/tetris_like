@@ -8,6 +8,11 @@ public class Tuto_Manager : MonoBehaviour {
 
 	private bool isSelectionActive = false;
 	private bool endGame = false;
+	private bool hpBool = false;
+	private bool pHpBool = false;
+	private bool shieldBool1 = false;
+	private bool ennemyHpBool1 = false;
+	private bool timerActive = true;
 
 	private string actualTag ;
 	private string shapeTag;
@@ -17,10 +22,22 @@ public class Tuto_Manager : MonoBehaviour {
 	public Image ennemyShield;
 
 	public GameObject winPanel;
-	public GameObject losePanel;
+	public GameObject tutoHpPanel1;
+	public GameObject tutoHpPanel2;
+	public GameObject tutoBravo2;
+	public GameObject tutoBravo3;
+	public GameObject tutoBravo1;
+	public GameObject tutoEnnemyPanel1;
+	public GameObject tutoShieldPanel1;
+	public GameObject tutoEnnemyPanel2;
+	public GameObject tutoShieldPanel2;
+	public GameObject tutoFinalEnnemy;
+	public GameObject tutoTimer;
+	public GameObject tutoFinalPanel;
 
 	private int actualMatchs = 0 ;
 	public int lifeLostPerSeconds;
+	private int actualCombinaisons;
 
 	public float hitEnnemyWithShield;
 	public float hitEnnemyWithoutShield;
@@ -60,6 +77,7 @@ void Awake ()
 	void Update () {
 		if (endGame == false)
 		{
+		TutoUpdate();
 		MaxMatchs();
 		CooldownPlayerHp();
 		VictoryOrDefeat();
@@ -97,38 +115,51 @@ void Awake ()
 		{
 			if (actualTag == "Cube")
 			{
+				if (pHpBool)
+				{
 				PlayerHpBar();
 				actualTag = null;
+				}
 			}
 			if (actualTag == "Triangle")
 			{
-				EnnemyHpBar();
-				actualTag = null;
+				if (ennemyHpBool1)
+				{
+					EnnemyHpBar();
+					actualTag = null;
+				}
 			}
 			if (actualTag == "Circle")
 			{
+				if (shieldBool1)
+				{
 				EnnemyShieldBar();
 				actualTag = null;
+				}
+				
 			}
 			Spawn_Manager.Instance().UnSpawnForms();
 			Spawn_Manager.Instance().StartingIdx();
 			actualMatchs = 0;
 			isSelectionActive = false;
 			ResetTimer();
-
 		}
 	}
 
 	public void PlayerHpBar ()
 
 	{
-		playerHp.fillAmount += 0.2f;
+		playerHp.fillAmount += 0.5f;
 	}
 
 	public void CooldownPlayerHp ()
 
 	{
-		playerHp.fillAmount -= Time.deltaTime / lifeLostPerSeconds;
+		if (!hpBool)
+		{
+			playerHp.fillAmount -= Time.deltaTime / lifeLostPerSeconds;
+		}
+		
 	}
 
 	public void EnnemyHpBar ()
@@ -152,12 +183,6 @@ void Awake ()
 
 	public void VictoryOrDefeat ()
 	{
-		if (playerHp.fillAmount == 0f)
-		{
-			losePanel.SetActive(true);
-			endGame = true;
-
-		}
 		if (ennemyHp.fillAmount == 0f)
 		{
 			winPanel.SetActive(true);
@@ -175,6 +200,8 @@ void Awake ()
 	public void CooldownTimer()
 
 	{
+		if (timerActive)
+		{
 		tmpTimer -= Time.deltaTime;
 		timer.text = tmpTimer.ToString("F2") + "s";
 		if (tmpTimer <= 0.0f)
@@ -184,6 +211,7 @@ void Awake ()
 			ennemyShield.fillAmount += ennemyShieldRecover;
 			Spawn_Manager.Instance().UnSpawnForms();
 			Spawn_Manager.Instance().StartingIdx();
+		}
 		}
 	}
 	public void ReturnToMenu()
@@ -198,4 +226,94 @@ void Awake ()
 	{
 		SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
 	}
+	public void TutoUpdate()
+	{
+		if (playerHp.fillAmount <= 0.9 && !pHpBool)
+		{
+			hpBool = true;
+			tutoHpPanel1.SetActive(true);
+			pHpBool = true;
+			timerActive = false;
+		}
+		if (playerHp.fillAmount >= 1 && pHpBool)
+		{
+			tutoBravo1.SetActive(true);
+			pHpBool = false;
+			timerActive = false;
+		}
+		if (shieldBool1 && ennemyShield.fillAmount <= 0)
+		{
+			tutoBravo2.SetActive(true);
+			shieldBool1 = false;
+			timerActive = false;
+		}
+		if (ennemyHpBool1 && ennemyHp.fillAmount <= 0.8)
+		{
+			tutoBravo3.SetActive(true);
+			ennemyHpBool1 = false;
+			timerActive = false;
+		}
+	}
+	public void TutoHp1()
+	{
+		tutoHpPanel1.SetActive(false);
+		tutoHpPanel2.SetActive(true);
+	}
+
+	public void TutoHp2()
+	{
+		tutoHpPanel2.SetActive(false);
+		timerActive = true;
+	}
+	public void TutoBravo1()
+	{
+		tutoBravo1.SetActive(false);
+		tutoShieldPanel1.SetActive(true);
+	}
+
+	public void TutoShield1()
+	{
+		tutoShieldPanel1.SetActive(false);
+		tutoShieldPanel2.SetActive(true);
+	}
+	public void TutoShield2()
+	{
+		tutoShieldPanel2.SetActive(false);
+		shieldBool1 = true;
+		timerActive = true;
+	}
+	public void TutoBravo2()
+	{
+		tutoBravo2.SetActive(false);
+		tutoEnnemyPanel1.SetActive(true);
+	}
+	public void TutoEnnemy1()
+	{
+		tutoEnnemyPanel1.SetActive(false);
+		tutoEnnemyPanel2.SetActive(true);
+	}
+	public void TutoEnnemy2()
+	{
+		tutoEnnemyPanel2.SetActive(false);
+		ennemyHpBool1 = true;
+		timerActive = true;
+	}
+	public void TutoBravo3()
+	{
+		tutoBravo3.SetActive(false);
+		tutoFinalEnnemy.SetActive(true);
+	}
+	public void TutoTimer()
+	{
+		tutoFinalEnnemy.SetActive(false);
+		tutoTimer.SetActive(true);
+		timerActive = true;
+	}
+	public void TutoFinal()
+	{
+		timerActive = false;
+		tutoTimer.SetActive(false);
+		tutoFinalPanel.SetActive(true);
+	}
+
 }
