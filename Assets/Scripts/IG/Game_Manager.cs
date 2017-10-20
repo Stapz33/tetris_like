@@ -18,6 +18,7 @@ public class Game_Manager : MonoBehaviour {
 
 	public GameObject winPanel;
 	public GameObject losePanel;
+	public GameObject pausePanel;
 
 	private int actualMatchs = 0 ;
 	public int lifeLostPerSeconds;
@@ -197,5 +198,15 @@ void Awake ()
 	public void RetryToPlay()
 	{
 		SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
+	}
+
+	public void OnClickPause(){
+		pausePanel.SetActive(true);
+		Time.timeScale = 0;
+	}
+
+	public void OnClickQuitPause(){
+		pausePanel.SetActive(false);
+		Time.timeScale = 1;
 	}
 }
