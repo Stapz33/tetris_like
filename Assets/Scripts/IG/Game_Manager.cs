@@ -189,6 +189,7 @@ void Awake ()
 	}
 	public void ReturnToMenu()
 	{
+		Time.timeScale = 1;
 		SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
 	}
 	public void ContinueToPlay()
