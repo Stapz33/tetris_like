@@ -282,6 +282,11 @@ Prefab:
       propertyPath: timerInSeconds
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114134315951613256, guid: e606ad5cfd9d7384c9d97c09d397ebf3,
+        type: 2}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 1389565760}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e606ad5cfd9d7384c9d97c09d397ebf3, type: 2}
   m_IsPrefabParent: 0
@@ -303,6 +308,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2072224613}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1389565760 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1172916776374876, guid: 21de1c25434f43642b4e1a4acb2da45f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2072224613}
 --- !u!1 &1406944864
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,17 +528,22 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114317995768263910, guid: 21de1c25434f43642b4e1a4acb2da45f,
+    - target: {fileID: 114419987085056100, guid: 21de1c25434f43642b4e1a4acb2da45f,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1084245807}
-    - target: {fileID: 223065149622559136, guid: 21de1c25434f43642b4e1a4acb2da45f,
+    - target: {fileID: 114101626044808820, guid: 21de1c25434f43642b4e1a4acb2da45f,
         type: 2}
-      propertyPath: m_Camera
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 280154722}
-    - target: {fileID: 114743152203928518, guid: 21de1c25434f43642b4e1a4acb2da45f,
+      objectReference: {fileID: 1084245807}
+    - target: {fileID: 114980311230289394, guid: 21de1c25434f43642b4e1a4acb2da45f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1084245807}
+    - target: {fileID: 114047527192935786, guid: 21de1c25434f43642b4e1a4acb2da45f,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -538,7 +553,17 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1084245807}
-    - target: {fileID: 114047527192935786, guid: 21de1c25434f43642b4e1a4acb2da45f,
+    - target: {fileID: 114743152203928518, guid: 21de1c25434f43642b4e1a4acb2da45f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1084245807}
+    - target: {fileID: 223065149622559136, guid: 21de1c25434f43642b4e1a4acb2da45f,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 280154722}
+    - target: {fileID: 114317995768263910, guid: 21de1c25434f43642b4e1a4acb2da45f,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
