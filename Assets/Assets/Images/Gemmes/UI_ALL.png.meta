@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 420e0dc269cb2234c95e135da9319fd9
-timeCreated: 1508512527
+timeCreated: 1508513811
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -17,6 +17,12 @@ TextureImporter:
     21300020: Contour_Barre_Joueur
     21300022: Menu_Jouer
     21300024: Menu_Accueil
+    21300026: Ennemi_Sarco_Idle
+    21300028: Ennemi_Sarco_Shield
+    21300030: Ennemi_Sarco_Vie
+    21300032: Ennemi_Momie_Idle
+    21300034: Ennemi_Momie_Shield
+    21300036: Ennemi_Momie_Vie
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -258,7 +264,7 @@ TextureImporter:
         width: 2567
         height: 1450
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -271,6 +277,90 @@ TextureImporter:
         y: 297
         width: 2570
         height: 1448
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ennemi_Sarco_Idle
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 3130
+        width: 615
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ennemi_Sarco_Shield
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 3123
+        width: 610
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ennemi_Sarco_Vie
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 3123
+        width: 830
+        height: 990
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ennemi_Momie_Idle
+      rect:
+        serializedVersion: 2
+        x: 4946
+        y: 3128
+        width: 675
+        height: 770
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ennemi_Momie_Shield
+      rect:
+        serializedVersion: 2
+        x: 5798
+        y: 3128
+        width: 705
+        height: 770
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ennemi_Momie_Vie
+      rect:
+        serializedVersion: 2
+        x: 6732
+        y: 3128
+        width: 675
+        height: 855
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
