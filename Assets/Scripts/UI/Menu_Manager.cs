@@ -68,7 +68,8 @@ void Awake ()
 		tutoOne.SetActive(true);
 	}
 	public void NoToTuto(){
-		SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
+		askTuto.SetActive(false);
+		boardLevels.SetActive(true);
 	}
 	public void NextTuto(){
 		tutoOne.SetActive(false);
@@ -76,6 +77,12 @@ void Awake ()
 	}
 	public void EndTuto(){
 		SceneManager.LoadScene("LVLT_Scene", LoadSceneMode.Single);
+	}
+	public void EndCanvasTuto(){
+		boardLevels.SetActive(true);
+		mainMenu.SetActive(false);
+		tutoTwo.SetActive(false);
+
 	}
 
 }
