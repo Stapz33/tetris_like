@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 420e0dc269cb2234c95e135da9319fd9
-timeCreated: 1508426918
+timeCreated: 1508512527
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,8 @@ TextureImporter:
     21300016: Barre_Vie_Joueur
     21300018: Contour_Barre_Ennemi
     21300020: Contour_Barre_Joueur
+    21300022: Menu_Jouer
+    21300024: Menu_Accueil
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -243,6 +245,34 @@ TextureImporter:
         height: 230
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Menu_Jouer
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 294
+        width: 2567
+        height: 1450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Menu_Accueil
+      rect:
+        serializedVersion: 2
+        x: 2897
+        y: 297
+        width: 2570
+        height: 1448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
