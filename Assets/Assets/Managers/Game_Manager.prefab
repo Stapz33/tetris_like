@@ -56,10 +56,11 @@ MonoBehaviour:
   ennemyShield: {fileID: 0}
   winPanel: {fileID: 0}
   losePanel: {fileID: 0}
-  lifeLostPerSeconds: 10
+  pausePanel: {fileID: 0}
+  lifeLostPerSeconds: 6
   hitEnnemyWithShield: 0.1
-  hitEnnemyWithoutShield: 0.3
+  hitEnnemyWithoutShield: 0.2
   ennemyShieldPerHit: 0.2
-  ennemyShieldRecover: 0.2
+  ennemyShieldRecover: 0.4
   timerInSeconds: 3
   timer: {fileID: 0}

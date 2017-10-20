@@ -264,11 +264,6 @@ Prefab:
       objectReference: {fileID: 418847516}
     - target: {fileID: 114134315951613256, guid: e606ad5cfd9d7384c9d97c09d397ebf3,
         type: 2}
-      propertyPath: timer
-      value: 
-      objectReference: {fileID: 1218659558}
-    - target: {fileID: 114134315951613256, guid: e606ad5cfd9d7384c9d97c09d397ebf3,
-        type: 2}
       propertyPath: winPanel
       value: 
       objectReference: {fileID: 2072224614}
@@ -279,19 +274,14 @@ Prefab:
       objectReference: {fileID: 2072224615}
     - target: {fileID: 114134315951613256, guid: e606ad5cfd9d7384c9d97c09d397ebf3,
         type: 2}
-      propertyPath: ennemyShieldRecover
-      value: 0.4
-      objectReference: {fileID: 0}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 2072224616}
     - target: {fileID: 114134315951613256, guid: e606ad5cfd9d7384c9d97c09d397ebf3,
         type: 2}
-      propertyPath: hitEnnemyWithoutShield
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114134315951613256, guid: e606ad5cfd9d7384c9d97c09d397ebf3,
-        type: 2}
-      propertyPath: lifeLostPerSeconds
-      value: 6
-      objectReference: {fileID: 0}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1218659558}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e606ad5cfd9d7384c9d97c09d397ebf3, type: 2}
   m_IsPrefabParent: 0
@@ -579,5 +569,10 @@ GameObject:
 --- !u!1 &2072224615 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1291503028554050, guid: 21de1c25434f43642b4e1a4acb2da45f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2072224613}
+--- !u!1 &2072224616 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1172916776374876, guid: 21de1c25434f43642b4e1a4acb2da45f,
     type: 2}
   m_PrefabInternal: {fileID: 2072224613}
