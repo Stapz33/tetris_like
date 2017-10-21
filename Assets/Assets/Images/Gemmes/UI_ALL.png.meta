@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 420e0dc269cb2234c95e135da9319fd9
-timeCreated: 1508513811
+timeCreated: 1508595097
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -23,6 +23,13 @@ TextureImporter:
     21300032: Ennemi_Momie_Idle
     21300034: Ennemi_Momie_Shield
     21300036: Ennemi_Momie_Vie
+    21300038: Fond_Basic
+    21300040: Niveau_01
+    21300042: Niveau_02
+    21300044: Niveau_03
+    21300046: Niveau_Block
+    21300048: Bandeau_Victoire
+    21300050: Bandeau_Defaite
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -292,7 +299,7 @@ TextureImporter:
         width: 615
         height: 990
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -306,7 +313,7 @@ TextureImporter:
         width: 610
         height: 990
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,7 +327,7 @@ TextureImporter:
         width: 830
         height: 990
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -334,7 +341,7 @@ TextureImporter:
         width: 675
         height: 770
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -348,7 +355,7 @@ TextureImporter:
         width: 705
         height: 770
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -361,6 +368,104 @@ TextureImporter:
         y: 3128
         width: 675
         height: 855
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fond_Basic
+      rect:
+        serializedVersion: 2
+        x: 5812
+        y: 298
+        width: 2576
+        height: 1454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Niveau_01
+      rect:
+        serializedVersion: 2
+        x: 3905
+        y: 2143
+        width: 621
+        height: 649
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Niveau_02
+      rect:
+        serializedVersion: 2
+        x: 4601
+        y: 2118
+        width: 625
+        height: 674
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Niveau_03
+      rect:
+        serializedVersion: 2
+        x: 5281
+        y: 2116
+        width: 625
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Niveau_Block
+      rect:
+        serializedVersion: 2
+        x: 6117
+        y: 2104
+        width: 585
+        height: 639
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bandeau_Victoire
+      rect:
+        serializedVersion: 2
+        x: 7758
+        y: 3429
+        width: 1546
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bandeau_Defaite
+      rect:
+        serializedVersion: 2
+        x: 7761
+        y: 2476
+        width: 1543
+        height: 682
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
