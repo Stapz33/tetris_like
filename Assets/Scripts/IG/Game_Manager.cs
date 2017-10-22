@@ -8,6 +8,7 @@ public class Game_Manager : MonoBehaviour {
 
 	private bool isSelectionActive = false;
 	private bool endGame = false;
+	private bool spriteChanged = false;
 
 	private string actualTag ;
 	private string shapeTag;
@@ -19,6 +20,9 @@ public class Game_Manager : MonoBehaviour {
 	public GameObject winPanel;
 	public GameObject losePanel;
 	public GameObject pausePanel;
+	public GameObject spriteIdle;
+	public GameObject spriteShielded;
+	public GameObject spriteDamaged;
 
 	private int actualMatchs = 0 ;
 	public int lifeLostPerSeconds;
@@ -29,6 +33,8 @@ public class Game_Manager : MonoBehaviour {
 	public float ennemyShieldRecover;
 	public float timerInSeconds;
 	private float tmpTimer;
+	private float spriteTimerActual;
+	public float initialSpriteTimer;
 
 	public Text timer;
 
@@ -55,6 +61,7 @@ void Awake ()
 	// Use this for initialization
 	void Start () {
 		tmpTimer = timerInSeconds;
+		spriteTimerActual = initialSpriteTimer;
 	}
 	
 	// Update is called once per frame
@@ -65,6 +72,7 @@ void Awake ()
 		CooldownPlayerHp();
 		VictoryOrDefeat();
 		CooldownTimer();	
+		CooldownSprites();
 		}
 	}
 
@@ -138,10 +146,16 @@ void Awake ()
 		if (ennemyShield.fillAmount > 0)
 			{
 				ennemyHp.fillAmount -= hitEnnemyWithShield;
+				spriteIdle.SetActive(false);
+				spriteDamaged.SetActive(true);
+				spriteChanged = true;
 			}
 		if (ennemyShield.fillAmount == 0)
 			{
 				ennemyHp.fillAmount -= hitEnnemyWithoutShield;
+				spriteIdle.SetActive(false);
+				spriteDamaged.SetActive(true);
+				spriteChanged = true;
 			}
 	}
 
@@ -149,6 +163,9 @@ void Awake ()
 
 	{
 		ennemyShield.fillAmount -= ennemyShieldPerHit;
+		spriteIdle.SetActive(false);
+		spriteShielded.SetActive(true);
+		spriteChanged = true;
 	}
 
 	public void VictoryOrDefeat ()
@@ -157,6 +174,8 @@ void Awake ()
 		{
 			losePanel.SetActive(true);
 			endGame = true;
+			Life_Manager.Instance().SubstractLife();
+
 
 		}
 		if (ennemyHp.fillAmount == 0f)
@@ -209,5 +228,19 @@ void Awake ()
 	public void OnClickQuitPause(){
 		pausePanel.SetActive(false);
 		Time.timeScale = 1;
+	}
+	public void CooldownSprites(){
+		if (spriteChanged)
+		{
+			spriteTimerActual -= Time.deltaTime;
+			if (spriteTimerActual <= 0)
+			{
+				spriteTimerActual = initialSpriteTimer;
+				spriteDamaged.SetActive(false);
+				spriteShielded.SetActive(false);
+				spriteIdle.SetActive(true);
+			}
+		}
+		
 	}
 }

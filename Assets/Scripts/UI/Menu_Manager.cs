@@ -11,6 +11,12 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject tutoOne;
 	public GameObject tutoTwo;
 	public GameObject acceuilPanel;
+	public GameObject lifeOne;
+	public GameObject lifeTwo;
+	public GameObject lifeThree;
+
+
+	private int lifeCount = 3;
 
 	private static Menu_Manager instance ;
     public static Menu_Manager Instance () 
@@ -34,12 +40,12 @@ void Awake ()
 
 	// Use this for initialization
 	void Start () {
-		
+		LoadLifes();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		DisplayLifes();
 	}
 
 	public void PlayOnClick(){
@@ -90,4 +96,37 @@ void Awake ()
 		acceuilPanel.SetActive(false);
 	}
 
+	public void DisplayLifes()
+
+	{
+		if (lifeCount == 3)
+		{
+			lifeThree.SetActive(true);
+			lifeOne.SetActive(true);
+			lifeTwo.SetActive(true);
+		}
+		if (lifeCount == 2)
+		{
+			lifeThree.SetActive(false);
+			lifeTwo.SetActive(true);
+			lifeOne.SetActive(true);
+		}
+		if (lifeCount == 1)
+		{
+			lifeThree.SetActive(false);
+			lifeTwo.SetActive(false);
+			lifeOne.SetActive(true);
+		}
+		if (lifeCount == 0)
+		{
+			lifeThree.SetActive(false);
+			lifeTwo.SetActive(false);
+			lifeOne.SetActive(false);
+		}
+	}
+
+	public void LoadLifes()
+	{
+		lifeCount = Life_Manager.Instance().SendLifeCount();
+	}
 }
