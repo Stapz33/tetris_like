@@ -1098,7 +1098,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: RetryToPlay
+        m_MethodName: RetryToPlayLVL2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2427,7 +2427,7 @@ RectTransform:
   m_Children:
   - {fileID: 224399266959321978}
   m_Father: {fileID: 224673075125398188}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.013618298, y: 0.6233152}
   m_AnchorMax: {x: 0.09577275, y: 0.7472717}
@@ -2748,7 +2748,7 @@ RectTransform:
   - {fileID: 224117759317515282}
   - {fileID: 224459814180583140}
   m_Father: {fileID: 224673075125398188}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2823,7 +2823,7 @@ RectTransform:
   - {fileID: 224526582595775238}
   - {fileID: 224005054035110660}
   m_Father: {fileID: 224673075125398188}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2907,10 +2907,10 @@ RectTransform:
   - {fileID: 224857296732097492}
   - {fileID: 224852293771344342}
   - {fileID: 224812587764528922}
+  - {fileID: 224071242223131516}
   - {fileID: 224724739578895714}
   - {fileID: 224519488954936034}
   - {fileID: 224574209784617442}
-  - {fileID: 224071242223131516}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2953,7 +2953,7 @@ RectTransform:
   - {fileID: 224682106532786610}
   - {fileID: 224593642343861376}
   m_Father: {fileID: 224673075125398188}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

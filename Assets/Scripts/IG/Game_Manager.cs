@@ -243,4 +243,8 @@ void Awake ()
 		}
 		
 	}
+	public void RetryToPlayLVL2()
+	{
+		SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+	}
 }

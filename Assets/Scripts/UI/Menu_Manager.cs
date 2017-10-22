@@ -15,6 +15,8 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject lifeTwo;
 	public GameObject lifeThree;
 
+	private static bool tutoPassed = false;
+	private static bool acceuilPassed = false;
 
 	private int lifeCount = 3;
 
@@ -41,6 +43,7 @@ void Awake ()
 	// Use this for initialization
 	void Start () {
 		LoadLifes();
+		AcceuilPassed();
 	}
 	
 	// Update is called once per frame
@@ -55,6 +58,7 @@ void Awake ()
 	}
 
 	public void QuitOnClick(){
+		acceuilPassed = false;
 		Application.Quit();
 		Debug.Log("Quit");
 	}
@@ -65,7 +69,17 @@ void Awake ()
 
 	}
 	public void LvlOne (){
-		askTuto.SetActive(true);
+		if (tutoPassed == false)
+		{
+			askTuto.SetActive(true);
+			tutoPassed = true;
+			return;
+		}
+		if (tutoPassed)
+		{
+			SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
+		}
+		
 	}
 	public void LvlTwo (){
 		SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
@@ -93,7 +107,8 @@ void Awake ()
 	}
 	public void AcceuilToMenu()
 	{
-		acceuilPanel.SetActive(false);
+			acceuilPanel.SetActive(false);
+			acceuilPassed = true;	
 	}
 
 	public void DisplayLifes()
@@ -128,5 +143,11 @@ void Awake ()
 	public void LoadLifes()
 	{
 		lifeCount = Life_Manager.Instance().SendLifeCount();
+	}
+	public void AcceuilPassed(){
+		if (acceuilPassed)
+		{
+			acceuilPanel.SetActive(false);
+		}
 	}
 }

@@ -522,16 +522,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114165175165555746, guid: c4178ce6ba28031419084631243ab3b5,
+    - target: {fileID: 114959205807643656, guid: c4178ce6ba28031419084631243ab3b5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1084245807}
-    - target: {fileID: 223205328066190842, guid: c4178ce6ba28031419084631243ab3b5,
+    - target: {fileID: 114698122212332536, guid: c4178ce6ba28031419084631243ab3b5,
         type: 2}
-      propertyPath: m_Camera
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 280154722}
+      objectReference: {fileID: 1084245807}
+    - target: {fileID: 114604060426288820, guid: c4178ce6ba28031419084631243ab3b5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1084245807}
     - target: {fileID: 114288934211354464, guid: c4178ce6ba28031419084631243ab3b5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -542,22 +547,17 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1084245807}
-    - target: {fileID: 114698122212332536, guid: c4178ce6ba28031419084631243ab3b5,
+    - target: {fileID: 223205328066190842, guid: c4178ce6ba28031419084631243ab3b5,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 280154722}
+    - target: {fileID: 114165175165555746, guid: c4178ce6ba28031419084631243ab3b5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1084245807}
     - target: {fileID: 114213064854281620, guid: c4178ce6ba28031419084631243ab3b5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1084245807}
-    - target: {fileID: 114959205807643656, guid: c4178ce6ba28031419084631243ab3b5,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1084245807}
-    - target: {fileID: 114604060426288820, guid: c4178ce6ba28031419084631243ab3b5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
