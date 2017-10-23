@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 420e0dc269cb2234c95e135da9319fd9
-timeCreated: 1508752179
+timeCreated: 1508767460
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -49,6 +49,8 @@ TextureImporter:
     21300084: Gemme_Rouge_Boost_Non
     21300086: Gemme_Verte_Boost_Non
     21300088: Gemme_Bleue_Boost_Non
+    21300090: Icone_Vie
+    21300092: Menu_Boutique
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -101,7 +103,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -109,7 +111,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -117,7 +119,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -285,10 +287,10 @@ TextureImporter:
       name: "Menu_Jouer_Fran\xE7ais"
       rect:
         serializedVersion: 2
-        x: 12951
-        y: 2691
-        width: 2579
-        height: 1466
+        x: 12957
+        y: 2698
+        width: 2568
+        height: 1452
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -506,111 +508,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Img_Pause
-      rect:
-        serializedVersion: 2
-        x: 10289
-        y: 3858
-        width: 705
-        height: 222
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Img_Continuer
-      rect:
-        serializedVersion: 2
-        x: 10281
-        y: 3535
-        width: 1035
-        height: 223
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Img_Quitter
-      rect:
-        serializedVersion: 2
-        x: 10296
-        y: 3182
-        width: 736
-        height: 253
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Img_Reprendre
-      rect:
-        serializedVersion: 2
-        x: 10304
-        y: 2845
-        width: 1059
-        height: 267
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Img_Abandonner
-      rect:
-        serializedVersion: 2
-        x: 10296
-        y: 2499
-        width: 1281
-        height: 222
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Img_Recommencer
-      rect:
-        serializedVersion: 2
-        x: 10304
-        y: 2130
-        width: 1434
-        height: 215
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Img_Bouton_Pause
-      rect:
-        serializedVersion: 2
-        x: 10273
-        y: 1562
-        width: 353
-        height: 353
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: Menu_Jouer_Anglais
       rect:
         serializedVersion: 2
-        x: 12951
-        y: 1156
-        width: 2579
-        height: 1466
+        x: 12956
+        y: 1163
+        width: 2569
+        height: 1454
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -621,10 +525,10 @@ TextureImporter:
       name: Fond_Boosts
       rect:
         serializedVersion: 2
-        x: 11931
-        y: 1770
-        width: 483
-        height: 1166
+        x: 11933
+        y: 1777
+        width: 477
+        height: 1153
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -635,10 +539,10 @@ TextureImporter:
       name: Gemme_Rouge_Boost
       rect:
         serializedVersion: 2
-        x: 10866
+        x: 10871
         y: 1042
-        width: 569
-        height: 574
+        width: 561
+        height: 571
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -663,10 +567,10 @@ TextureImporter:
       name: Gemme_Verte_Boost
       rect:
         serializedVersion: 2
-        x: 11497
-        y: 1006
-        width: 557
-        height: 603
+        x: 11498
+        y: 1010
+        width: 549
+        height: 599
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -677,10 +581,10 @@ TextureImporter:
       name: Gemme_Bleue_Boost
       rect:
         serializedVersion: 2
-        x: 12300
-        y: 1029
-        width: 574
-        height: 569
+        x: 12304
+        y: 1037
+        width: 568
+        height: 557
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,12 +623,12 @@ TextureImporter:
       name: Gemme_Rouge_Boost_Non
       rect:
         serializedVersion: 2
-        x: 13167
-        y: 421
-        width: 566
-        height: 572
+        x: 13174
+        y: 426
+        width: 557
+        height: 564
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -738,7 +642,7 @@ TextureImporter:
         width: 553
         height: 614
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -747,12 +651,12 @@ TextureImporter:
       name: Gemme_Bleue_Boost_Non
       rect:
         serializedVersion: 2
-        x: 14603
+        x: 14606
         y: 413
-        width: 572
+        width: 566
         height: 558
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
