@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 420e0dc269cb2234c95e135da9319fd9
-timeCreated: 1508743441
+timeCreated: 1508744243
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -267,10 +267,10 @@ TextureImporter:
       name: Menu_Jouer
       rect:
         serializedVersion: 2
-        x: 241
-        y: 294
-        width: 2567
-        height: 1450
+        x: 245
+        y: 303
+        width: 2558
+        height: 1443
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -482,7 +482,7 @@ TextureImporter:
         width: 1530
         height: 1485
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
