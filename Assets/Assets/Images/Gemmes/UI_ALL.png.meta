@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 420e0dc269cb2234c95e135da9319fd9
-timeCreated: 1508745209
+timeCreated: 1508752179
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,7 +15,7 @@ TextureImporter:
     21300016: Barre_Vie_Joueur
     21300018: Contour_Barre_Ennemi
     21300020: Contour_Barre_Joueur
-    21300022: Menu_Jouer
+    21300022: "Menu_Jouer_Fran\xE7ais"
     21300024: Menu_Accueil
     21300026: Ennemi_Sarco_Idle
     21300028: Ennemi_Sarco_Shield
@@ -38,6 +38,17 @@ TextureImporter:
     21300062: Img_Abandonner
     21300064: Img_Recommencer
     21300066: Img_Bouton_Pause
+    21300068: Menu_Jouer_Anglais
+    21300070: Fond_Boosts
+    21300072: Gemme_Rouge_Boost
+    21300074: Gemme_Rouge_Boost_Activ
+    21300076: Gemme_Verte_Boost
+    21300078: Gemme_Bleue_Boost
+    21300080: Gemme_Verte_Boost_Activ
+    21300082: Gemme_Bleue_Boost_Activ
+    21300084: Gemme_Rouge_Boost_Non
+    21300086: Gemme_Verte_Boost_Non
+    21300088: Gemme_Bleue_Boost_Non
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -271,13 +282,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Menu_Jouer
+      name: "Menu_Jouer_Fran\xE7ais"
       rect:
         serializedVersion: 2
-        x: 245
-        y: 303
-        width: 2558
-        height: 1443
+        x: 12951
+        y: 2691
+        width: 2579
+        height: 1466
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,7 +514,7 @@ TextureImporter:
         width: 705
         height: 222
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -517,7 +528,7 @@ TextureImporter:
         width: 1035
         height: 223
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -531,7 +542,7 @@ TextureImporter:
         width: 736
         height: 253
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -545,7 +556,7 @@ TextureImporter:
         width: 1059
         height: 267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -559,7 +570,7 @@ TextureImporter:
         width: 1281
         height: 222
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -573,7 +584,7 @@ TextureImporter:
         width: 1434
         height: 215
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -586,6 +597,160 @@ TextureImporter:
         y: 1562
         width: 353
         height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Menu_Jouer_Anglais
+      rect:
+        serializedVersion: 2
+        x: 12951
+        y: 1156
+        width: 2579
+        height: 1466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fond_Boosts
+      rect:
+        serializedVersion: 2
+        x: 11931
+        y: 1770
+        width: 483
+        height: 1166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Rouge_Boost
+      rect:
+        serializedVersion: 2
+        x: 10866
+        y: 1042
+        width: 569
+        height: 574
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Rouge_Boost_Activ
+      rect:
+        serializedVersion: 2
+        x: 10941
+        y: 365
+        width: 677
+        height: 587
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Verte_Boost
+      rect:
+        serializedVersion: 2
+        x: 11497
+        y: 1006
+        width: 557
+        height: 603
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Bleue_Boost
+      rect:
+        serializedVersion: 2
+        x: 12300
+        y: 1029
+        width: 574
+        height: 569
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Verte_Boost_Activ
+      rect:
+        serializedVersion: 2
+        x: 11646
+        y: 331
+        width: 584
+        height: 614
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Bleue_Boost_Activ
+      rect:
+        serializedVersion: 2
+        x: 12276
+        y: 342
+        width: 582
+        height: 575
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Rouge_Boost_Non
+      rect:
+        serializedVersion: 2
+        x: 13167
+        y: 421
+        width: 566
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Verte_Boost_Non
+      rect:
+        serializedVersion: 2
+        x: 13798
+        y: 384
+        width: 553
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Bleue_Boost_Non
+      rect:
+        serializedVersion: 2
+        x: 14603
+        y: 413
+        width: 572
+        height: 558
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
