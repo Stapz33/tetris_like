@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Game_Manager : MonoBehaviour {
 
 	private bool isSelectionActive = false;
 	private bool endGame = false;
 	private bool spriteChanged = false;
+	private bool noLifeIG = false;
 
 	private string actualTag ;
 	private string shapeTag;
@@ -74,6 +76,7 @@ void Awake ()
 		CooldownTimer();	
 		CooldownSprites();
 		}
+		NoLifeIG();
 	}
 
 	public void OnClickRune (GameObject shapeInUse)
@@ -204,6 +207,8 @@ void Awake ()
 			ennemyShield.fillAmount += ennemyShieldRecover;
 			Spawn_Manager.Instance().UnSpawnForms();
 			Spawn_Manager.Instance().StartingIdx();
+			actualMatchs = 0;
+			isSelectionActive = false;
 		}
 	}
 	public void ReturnToMenu()
@@ -213,11 +218,19 @@ void Awake ()
 	}
 	public void ContinueToPlay()
 	{
-		SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+		if (!noLifeIG)
+		{
+			SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+		}
+		
 	}
 	public void RetryToPlay()
 	{
-		SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
+		if (!noLifeIG)
+		{
+			SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
+		}
+		
 	}
 
 	public void OnClickPause(){
@@ -245,6 +258,17 @@ void Awake ()
 	}
 	public void RetryToPlayLVL2()
 	{
-		SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+		if (!noLifeIG)
+		{
+			SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+		}
+		
 	}
+
+	public void NoLifeIG()
+
+	{
+		noLifeIG = Life_Manager.Instance().NoLifeAsk();
+	}
+
 }

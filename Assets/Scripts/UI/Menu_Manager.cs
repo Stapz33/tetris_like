@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Menu_Manager : MonoBehaviour {
 
@@ -17,6 +18,7 @@ public class Menu_Manager : MonoBehaviour {
 
 	private static bool tutoPassed = false;
 	private static bool acceuilPassed = false;
+	private bool noLife = false;
 
 	private int lifeCount = 3;
 
@@ -49,6 +51,7 @@ void Awake ()
 	// Update is called once per frame
 	void Update () {
 		DisplayLifes();
+		NoLifes();
 	}
 
 	public void PlayOnClick(){
@@ -75,14 +78,18 @@ void Awake ()
 			tutoPassed = true;
 			return;
 		}
-		if (tutoPassed)
+		if (tutoPassed && !noLife)
 		{
 			SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
 		}
 		
 	}
 	public void LvlTwo (){
-		SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+		if (!noLife)
+		{
+			SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+		}
+		
 	}
 	public void YesToTuto(){
 		askTuto.SetActive(false);
@@ -97,7 +104,11 @@ void Awake ()
 		tutoTwo.SetActive(true);
 	}
 	public void EndTuto(){
-		SceneManager.LoadScene("LVLT_Scene", LoadSceneMode.Single);
+		if (!noLife)
+		{
+			SceneManager.LoadScene("LVLT_Scene", LoadSceneMode.Single);
+		}
+		
 	}
 	public void EndCanvasTuto(){
 		boardLevels.SetActive(true);
@@ -149,5 +160,13 @@ void Awake ()
 		{
 			acceuilPanel.SetActive(false);
 		}
+	}
+	public void NoLifes()
+	{
+		noLife = Life_Manager.Instance().NoLifeAsk();
+	}
+	public void OnApplicationQuit()
+	{
+		Life_Manager.Instance().SaveTimer();
 	}
 }
