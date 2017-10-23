@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 420e0dc269cb2234c95e135da9319fd9
-timeCreated: 1508744243
+timeCreated: 1508745209
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -31,6 +31,13 @@ TextureImporter:
     21300048: Bandeau_Victoire
     21300050: Bandeau_Defaite
     21300052: Zone_Jeu
+    21300054: Img_Pause
+    21300056: Img_Continuer
+    21300058: Img_Quitter
+    21300060: Img_Reprendre
+    21300062: Img_Abandonner
+    21300064: Img_Recommencer
+    21300066: Img_Bouton_Pause
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -483,6 +490,104 @@ TextureImporter:
         height: 1485
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Pause
+      rect:
+        serializedVersion: 2
+        x: 10289
+        y: 3858
+        width: 705
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Continuer
+      rect:
+        serializedVersion: 2
+        x: 10281
+        y: 3535
+        width: 1035
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Quitter
+      rect:
+        serializedVersion: 2
+        x: 10296
+        y: 3182
+        width: 736
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Reprendre
+      rect:
+        serializedVersion: 2
+        x: 10304
+        y: 2845
+        width: 1059
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Abandonner
+      rect:
+        serializedVersion: 2
+        x: 10296
+        y: 2499
+        width: 1281
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Recommencer
+      rect:
+        serializedVersion: 2
+        x: 10304
+        y: 2130
+        width: 1434
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Bouton_Pause
+      rect:
+        serializedVersion: 2
+        x: 10273
+        y: 1562
+        width: 353
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
