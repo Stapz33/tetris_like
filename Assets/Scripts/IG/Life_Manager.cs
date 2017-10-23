@@ -110,7 +110,6 @@ void Awake ()
 	public void SetDateTimer(){
 		lifeCount = PlayerPrefs.GetInt("lifeCount");
 		Debug.Log(lifeCount);
-		Debug.Log(timeDifference);
 		 currentDate = DateTime.Now;
  
          oldDate = Convert.ToDateTime(PlayerPrefs.GetString("currentTIme"));
@@ -157,7 +156,6 @@ void Awake ()
 				timerOffline = 1200;
         	 }
          }
-         if (difference < time)
  
 	}
 	public void SaveTimer ()
