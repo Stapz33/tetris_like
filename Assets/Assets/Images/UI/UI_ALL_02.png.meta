@@ -1,11 +1,16 @@
 fileFormatVersion: 2
 guid: 937ef2474654be14482bb75da1e8380f
-timeCreated: 1508767792
+timeCreated: 1508768718
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Icone_Vie
     21300002: Menu_Boutique
+    21300004: Img_Bouton_Rectangle
+    21300006: Img_Bouton_Carre
+    21300008: Bandeau_Jaune
+    21300010: Bandeau_Bleu
+    21300012: Bandeau_Gris
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -93,7 +98,7 @@ TextureImporter:
         width: 373
         height: 427
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -106,6 +111,76 @@ TextureImporter:
         y: 2804
         width: 1441
         height: 813
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Bouton_Rectangle
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 2784
+        width: 499
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Img_Bouton_Carre
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 2588
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bandeau_Jaune
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 2294
+        width: 552
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bandeau_Bleu
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1990
+        width: 552
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bandeau_Gris
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1986
+        width: 555
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
