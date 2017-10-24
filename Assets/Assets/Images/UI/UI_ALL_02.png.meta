@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 937ef2474654be14482bb75da1e8380f
-timeCreated: 1508835933
+timeCreated: 1508836369
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -109,10 +109,10 @@ TextureImporter:
       name: Menu_Boutique
       rect:
         serializedVersion: 2
-        x: 812
-        y: 2241
-        width: 2570
-        height: 1449
+        x: 816
+        y: 2231
+        width: 2569
+        height: 1448
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
