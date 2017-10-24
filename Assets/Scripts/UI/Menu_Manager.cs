@@ -46,7 +46,6 @@ void Awake ()
 
 	// Use this for initialization
 	void Start () {
-		LoadLifes();
 		AcceuilPassed();
 	}
 	
@@ -54,6 +53,7 @@ void Awake ()
 	void Update () {
 		DisplayLifes();
 		NoLifes();
+		LoadLifes();
 	}
 
 	public void PlayOnClick(){
@@ -186,5 +186,9 @@ void Awake ()
 	public void CloseLifeShop()
 	{
 		lifeShopPanel.SetActive(false);
+	}
+	public void BuyLife()
+	{
+		Life_Manager.Instance().ResetLifes();
 	}
 }

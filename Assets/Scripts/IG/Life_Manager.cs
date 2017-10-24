@@ -7,9 +7,9 @@ public class Life_Manager : MonoBehaviour {
 
 	public int lifeCount = 3;
 
-	private static bool noLife = false;
+	private bool noLife = false;
 
-	private static float timerOffline = 1200;
+	private float timerOffline = 1200;
 	private float differenceTime;
 	
 	private DateTime currentDate;
@@ -82,7 +82,7 @@ void Awake ()
 		{
 			noLife = true;
 		}
-		if (lifeCount >0)
+		if (lifeCount > 0)
 		{
 			noLife = false;
 		}
@@ -163,5 +163,9 @@ void Awake ()
 		PlayerPrefs.SetInt("lifeCount",lifeCount);
 		PlayerPrefs.SetFloat("timerOffline",timerOffline);
 		PlayerPrefs.SetString("currentTIme", DateTime.Now.ToString());
+	}
+	public void ResetLifes()
+	{
+		lifeCount = 3;
 	}
 }
