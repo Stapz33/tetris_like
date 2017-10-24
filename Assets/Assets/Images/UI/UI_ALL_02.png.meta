@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 937ef2474654be14482bb75da1e8380f
-timeCreated: 1508833054
+timeCreated: 1508835108
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,7 @@ TextureImporter:
     21300010: Bandeau_Bleu
     21300012: Bandeau_Gris
     21300014: Fond_Texte_General
+    21300016: Menu_Boutique_Vie
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -108,10 +109,10 @@ TextureImporter:
       name: Menu_Boutique
       rect:
         serializedVersion: 2
-        x: 809
-        y: 2277
+        x: 776
+        y: 2261
         width: 2570
-        height: 1451
+        height: 1449
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,7 +151,7 @@ TextureImporter:
       name: Bandeau_Jaune
       rect:
         serializedVersion: 2
-        x: 104
+        x: 106
         y: 2294
         width: 552
         height: 178
@@ -194,10 +195,24 @@ TextureImporter:
         serializedVersion: 2
         x: 124
         y: 437
-        width: 2504
+        width: 2499
         height: 1384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Menu_Boutique_Vie
+      rect:
+        serializedVersion: 2
+        x: 3505
+        y: 2238
+        width: 2569
+        height: 1449
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
