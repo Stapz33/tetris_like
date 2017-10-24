@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 937ef2474654be14482bb75da1e8380f
-timeCreated: 1508838677
+timeCreated: 1508859469
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -16,6 +16,9 @@ TextureImporter:
     21300018: Ennemi_Scorpion_Idle
     21300020: Ennemi_Scorpion_Shield
     21300022: Ennemi_Scorpion_Vie
+    21300024: Ennemi_Scorpion_Mort
+    21300026: Ennemi_Momie_Mort
+    21300028: Ennemi_Sarco_Mort
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -229,7 +232,7 @@ TextureImporter:
         width: 995
         height: 1330
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,7 +246,7 @@ TextureImporter:
         width: 1127
         height: 1278
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -256,6 +259,48 @@ TextureImporter:
         y: 698
         width: 1142
         height: 1216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ennemi_Scorpion_Mort
+      rect:
+        serializedVersion: 2
+        x: 6764
+        y: 1854
+        width: 1082
+        height: 1350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ennemi_Momie_Mort
+      rect:
+        serializedVersion: 2
+        x: 8139
+        y: 2028
+        width: 1549
+        height: 1151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ennemi_Sarco_Mort
+      rect:
+        serializedVersion: 2
+        x: 10109
+        y: 1892
+        width: 1047
+        height: 1845
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
