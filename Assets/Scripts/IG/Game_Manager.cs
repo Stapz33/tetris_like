@@ -199,7 +199,7 @@ void Awake ()
 
 	{
 		tmpTimer -= Time.deltaTime;
-		timer.text = tmpTimer.ToString("F2") + "s";
+		timer.text = tmpTimer.ToString("F1") + "s";
 		if (tmpTimer <= 0.0f)
 		{
 			tmpTimer = 0;
