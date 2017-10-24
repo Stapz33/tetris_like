@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 937ef2474654be14482bb75da1e8380f
-timeCreated: 1508768718
+timeCreated: 1508833054
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,7 @@ TextureImporter:
     21300008: Bandeau_Jaune
     21300010: Bandeau_Bleu
     21300012: Bandeau_Gris
+    21300014: Fond_Texte_General
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -107,10 +108,10 @@ TextureImporter:
       name: Menu_Boutique
       rect:
         serializedVersion: 2
-        x: 743
-        y: 2804
-        width: 1441
-        height: 813
+        x: 809
+        y: 2277
+        width: 2570
+        height: 1451
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,7 +127,7 @@ TextureImporter:
         width: 499
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -140,7 +141,7 @@ TextureImporter:
         width: 128
         height: 129
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,7 +155,7 @@ TextureImporter:
         width: 552
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +169,7 @@ TextureImporter:
         width: 552
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,7 +183,21 @@ TextureImporter:
         width: 555
         height: 162
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fond_Texte_General
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 437
+        width: 2504
+        height: 1384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
