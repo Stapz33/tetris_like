@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 420e0dc269cb2234c95e135da9319fd9
-timeCreated: 1508857280
+timeCreated: 1508858064
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -53,6 +53,11 @@ TextureImporter:
     21300092: Menu_Boutique
     21300094: Gemme_Verte_Boost
     21300096: Gemme_Rouge_Boost_Non
+    21300098: Shield_Ok
+    21300100: Shield_Mort
+    21300102: Shield
+    21300104: Attaque_Shield
+    21300106: Attaque_Vie
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -659,6 +664,76 @@ TextureImporter:
         height: 317
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Shield_Ok
+      rect:
+        serializedVersion: 2
+        x: 11127
+        y: 2140
+        width: 237
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Shield_Mort
+      rect:
+        serializedVersion: 2
+        x: 11429
+        y: 2142
+        width: 240
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Shield
+      rect:
+        serializedVersion: 2
+        x: 11429
+        y: 2140
+        width: 240
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Attaque_Shield
+      rect:
+        serializedVersion: 2
+        x: 11752
+        y: 299
+        width: 641
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Attaque_Vie
+      rect:
+        serializedVersion: 2
+        x: 12643
+        y: 109
+        width: 691
+        height: 935
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
