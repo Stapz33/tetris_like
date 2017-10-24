@@ -15,6 +15,8 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject lifeOne;
 	public GameObject lifeTwo;
 	public GameObject lifeThree;
+	public GameObject shopPanel;
+	public GameObject lifeShopPanel;
 
 	private static bool tutoPassed = false;
 	private static bool acceuilPassed = false;
@@ -168,5 +170,21 @@ void Awake ()
 	public void OnApplicationQuit()
 	{
 		Life_Manager.Instance().SaveTimer();
+	}
+	public void CloseShop()
+	{
+		shopPanel.SetActive(false);
+	}
+	public void OpenShop()
+	{
+		shopPanel.SetActive(true);
+	}
+	public void OpenLifeShop()
+	{
+		lifeShopPanel.SetActive(true);
+	}
+	public void CloseLifeShop()
+	{
+		lifeShopPanel.SetActive(false);
 	}
 }

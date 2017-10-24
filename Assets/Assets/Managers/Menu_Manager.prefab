@@ -60,3 +60,5 @@ MonoBehaviour:
   lifeOne: {fileID: 0}
   lifeTwo: {fileID: 0}
   lifeThree: {fileID: 0}
+  shopPanel: {fileID: 0}
+  lifeShopPanel: {fileID: 0}
