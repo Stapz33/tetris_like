@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 420e0dc269cb2234c95e135da9319fd9
-timeCreated: 1508851488
+timeCreated: 1508857280
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -51,6 +51,8 @@ TextureImporter:
     21300088: Gemme_Bleue_Boost_Non
     21300090: Icone_Vie
     21300092: Menu_Boutique
+    21300094: Gemme_Verte_Boost
+    21300096: Gemme_Rouge_Boost_Non
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -526,9 +528,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11933
-        y: 1777
+        y: 1423
         width: 477
-        height: 1153
+        height: 1152
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,10 +541,10 @@ TextureImporter:
       name: Gemme_Rouge_Boost
       rect:
         serializedVersion: 2
-        x: 10871
-        y: 1042
-        width: 561
-        height: 571
+        x: 11776
+        y: 3773
+        width: 320
+        height: 327
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -553,38 +555,10 @@ TextureImporter:
       name: Gemme_Rouge_Boost_Activ
       rect:
         serializedVersion: 2
-        x: 10948
-        y: 372
-        width: 670
-        height: 577
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Gemme_Verte_Boost
-      rect:
-        serializedVersion: 2
-        x: 11498
-        y: 1010
-        width: 549
-        height: 599
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Gemme_Bleue_Boost
-      rect:
-        serializedVersion: 2
-        x: 12304
-        y: 1037
-        width: 568
-        height: 557
+        x: 12257
+        y: 3757
+        width: 319
+        height: 333
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -595,10 +569,10 @@ TextureImporter:
       name: Gemme_Verte_Boost_Activ
       rect:
         serializedVersion: 2
-        x: 11646
-        y: 334
-        width: 577
-        height: 610
+        x: 12261
+        y: 3251
+        width: 309
+        height: 346
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -606,13 +580,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Gemme_Bleue_Boost_Activ
+      name: Gemme_Verte_Boost
       rect:
         serializedVersion: 2
-        x: 12284
-        y: 342
-        width: 569
-        height: 568
+        x: 11769
+        y: 3238
+        width: 313
+        height: 345
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +597,10 @@ TextureImporter:
       name: Gemme_Rouge_Boost_Non
       rect:
         serializedVersion: 2
-        x: 13174
-        y: 426
-        width: 557
-        height: 564
+        x: 11211
+        y: 3775
+        width: 317
+        height: 320
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -637,10 +611,10 @@ TextureImporter:
       name: Gemme_Verte_Boost_Non
       rect:
         serializedVersion: 2
-        x: 13798
-        y: 384
-        width: 553
-        height: 614
+        x: 11202
+        y: 3237
+        width: 312
+        height: 342
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,10 +625,38 @@ TextureImporter:
       name: Gemme_Bleue_Boost_Non
       rect:
         serializedVersion: 2
-        x: 14606
-        y: 413
-        width: 566
-        height: 558
+        x: 11213
+        y: 2721
+        width: 322
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Bleue_Boost
+      rect:
+        serializedVersion: 2
+        x: 11780
+        y: 2717
+        width: 324
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Gemme_Bleue_Boost_Activ
+      rect:
+        serializedVersion: 2
+        x: 12261
+        y: 2701
+        width: 324
+        height: 317
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
