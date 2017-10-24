@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 420e0dc269cb2234c95e135da9319fd9
-timeCreated: 1508767460
+timeCreated: 1508851488
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -483,10 +483,10 @@ TextureImporter:
       name: Bandeau_Defaite
       rect:
         serializedVersion: 2
-        x: 7761
+        x: 7764
         y: 2476
-        width: 1543
-        height: 682
+        width: 1538
+        height: 679
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -553,10 +553,10 @@ TextureImporter:
       name: Gemme_Rouge_Boost_Activ
       rect:
         serializedVersion: 2
-        x: 10941
-        y: 365
-        width: 677
-        height: 587
+        x: 10948
+        y: 372
+        width: 670
+        height: 577
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -596,9 +596,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11646
-        y: 331
-        width: 584
-        height: 614
+        y: 334
+        width: 577
+        height: 610
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: Gemme_Bleue_Boost_Activ
       rect:
         serializedVersion: 2
-        x: 12276
+        x: 12284
         y: 342
-        width: 582
-        height: 575
+        width: 569
+        height: 568
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
