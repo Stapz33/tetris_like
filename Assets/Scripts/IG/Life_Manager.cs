@@ -5,7 +5,7 @@ using System;
 
 public class Life_Manager : MonoBehaviour {
 
-	private int lifeCount = 3;
+	public int lifeCount = 3;
 
 	private static bool noLife = false;
 
