@@ -53,5 +53,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardLevels: {fileID: 0}
   mainMenu: {fileID: 0}
-  winMenu: {fileID: 0}
-  loseMenu: {fileID: 0}
+  askTuto: {fileID: 0}
+  tutoOne: {fileID: 0}
+  tutoTwo: {fileID: 0}
+  acceuilPanel: {fileID: 0}
+  lifeOne: {fileID: 0}
+  lifeTwo: {fileID: 0}
+  lifeThree: {fileID: 0}
