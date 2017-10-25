@@ -33,6 +33,10 @@ public class Game_Manager : MonoBehaviour {
 	public Button blueBoost;
 	public Button redBoost;
 
+	public Button greenBoostI;
+	public Button blueBoostI;
+	public Button redBoostI;
+
 	private int actualMatchs = 0 ;
 	public int lifeLostPerSeconds;
 	private int greenBoostNb;
@@ -49,6 +53,10 @@ public class Game_Manager : MonoBehaviour {
 	public float initialSpriteTimer;
 
 	public Text timer;
+	public Text compterB;
+	public Text compterR;
+	public Text compterG;
+
 
 	private static Game_Manager instance ;
     public static Game_Manager Instance () 
@@ -242,6 +250,7 @@ void Awake ()
 	public void ReturnToMenu()
 	{
 		Time.timeScale = 1;
+		Life_Manager.Instance().SubstractLife();
 		SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
 	}
 	public void ContinueToPlay()
@@ -300,55 +309,79 @@ void Awake ()
 	}
 	public void CheckBoostsNb()
 	{
-		redBoostNb = Boost_Manager.Instance().ReturnBlue();
-		blueBoostNb = Boost_Manager.Instance().ReturnGreen();
-		greenBoostNb = Boost_Manager.Instance().ReturnRed();
+		redBoostNb = Boost_Manager.Instance().ReturnRed();
+		blueBoostNb = Boost_Manager.Instance().ReturnBlue();
+		greenBoostNb = Boost_Manager.Instance().ReturnGreen();
+		compterB.text = blueBoostNb.ToString();
+		compterG.text = greenBoostNb.ToString();
+		compterR.text = redBoostNb.ToString();
 	}
 
 	public void UseBoostGreen()
 	{
+		if (greenBoostNb > 0)
+		{
 		greenBoostActive = true;
 		Boost_Manager.Instance().UseBoostGreen();
+		greenBoost.interactable = false;
+		}
+		
 	}
 	public void UseBoostBlue()
 	{
+		if (blueBoostNb > 0)
+		{
 		blueBoostActive = true;
 		Boost_Manager.Instance().UseBoostBlue();
+		blueBoost.interactable = false;
+		}
+		
 	}
-	public void UseBoostred()
+	public void UseBoostRed()
 	{
+		if (redBoostNb > 0)
+		{
 		redBoostActive = true;
 		Boost_Manager.Instance().UseBoostRed();
+		redBoost.interactable = false;
+		}
+		
 	}
 	public void CheckBoostsDispo()
 	{
 		if (redBoostNb == 0)
 		{
-			redBoost.interactable = false;
+			redBoost.gameObject.SetActive(false);
+			redBoostI.gameObject.SetActive(true);
 		}
 
 		if (blueBoostNb == 0)
 		{
-			blueBoost.interactable = false;
+			blueBoost.gameObject.SetActive(false);
+			blueBoostI.gameObject.SetActive(true);
 		}
 
 		if (greenBoostNb == 0)
 		{
-			greenBoost.interactable = false;
+			greenBoost.gameObject.SetActive(false);
+			greenBoostI.gameObject.SetActive(true);
 		}
 		if (redBoostNb > 0)
 		{
-			redBoost.interactable = true;
+			redBoost.gameObject.SetActive(true);
+			redBoostI.gameObject.SetActive(false);
 		}
 
 		if (blueBoostNb > 0)
 		{
-			blueBoost.interactable = true;
+			blueBoost.gameObject.SetActive(true);
+			blueBoostI.gameObject.SetActive(false);
 		}
 
 		if (greenBoostNb > 0)
 		{
-			greenBoost.interactable = true;
+			greenBoost.gameObject.SetActive(true);
+			greenBoostI.gameObject.SetActive(false);
 		}
 	}
 

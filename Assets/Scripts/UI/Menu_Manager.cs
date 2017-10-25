@@ -18,6 +18,7 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject shopPanel;
 	public GameObject lifeShopPanel;
 	public GameObject lfsConfirm;
+	public GameObject bsConfirm;
 
 	private static bool tutoPassed = false;
 	private static bool acceuilPassed = false;
@@ -197,4 +198,24 @@ void Awake ()
 	{
 		lfsConfirm.SetActive(false);
 	}
+	public void BuyBoost1()
+	{
+		Boost_Manager.Instance().AddBoost1();
+		bsConfirm.SetActive(true);
+	}
+	public void BuyBoost2()
+	{
+		Boost_Manager.Instance().AddBoost2();
+		bsConfirm.SetActive(true);
+	}
+	public void BuyBoost3()
+	{
+		Boost_Manager.Instance().AddBoost3();
+		bsConfirm.SetActive(true);
+	}
+	public void ConfirmBS1()
+	{
+		bsConfirm.SetActive(false);
+	}	
+
 }

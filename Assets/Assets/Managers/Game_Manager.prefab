@@ -60,7 +60,13 @@ MonoBehaviour:
   spriteIdle: {fileID: 0}
   spriteShielded: {fileID: 0}
   spriteDamaged: {fileID: 0}
-  lifeLostPerSeconds: 3
+  greenBoost: {fileID: 0}
+  blueBoost: {fileID: 0}
+  redBoost: {fileID: 0}
+  greenBoostI: {fileID: 0}
+  blueBoostI: {fileID: 0}
+  redBoostI: {fileID: 0}
+  lifeLostPerSeconds: 10
   hitEnnemyWithShield: 0.1
   hitEnnemyWithoutShield: 0.3
   ennemyShieldPerHit: 0.2

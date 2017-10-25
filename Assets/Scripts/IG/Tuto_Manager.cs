@@ -12,7 +12,9 @@ public class Tuto_Manager : MonoBehaviour {
 	private bool pHpBool = false;
 	private bool shieldBool1 = false;
 	private bool ennemyHpBool1 = false;
+	private bool ennemyHpBool2 = false;
 	private bool timerActive = true;
+	private bool spriteChanged = false;
 
 	private string actualTag ;
 	private string shapeTag;
@@ -34,6 +36,9 @@ public class Tuto_Manager : MonoBehaviour {
 	public GameObject tutoFinalEnnemy;
 	public GameObject tutoTimer;
 	public GameObject tutoFinalPanel;
+	public GameObject spriteIdle;
+	public GameObject spriteShielded;
+	public GameObject spriteDamaged;
 
 	private int actualMatchs = 0 ;
 	public int lifeLostPerSeconds;
@@ -45,6 +50,8 @@ public class Tuto_Manager : MonoBehaviour {
 	public float ennemyShieldRecover;
 	public float timerInSeconds;
 	private float tmpTimer;
+	private float spriteTimerActual;
+	public float initialSpriteTimer;
 
 	public Text timer;
 
@@ -71,6 +78,7 @@ void Awake ()
 	// Use this for initialization
 	void Start () {
 		tmpTimer = timerInSeconds;
+		spriteTimerActual = initialSpriteTimer;
 	}
 	
 	// Update is called once per frame
@@ -81,7 +89,8 @@ void Awake ()
 		MaxMatchs();
 		CooldownPlayerHp();
 		VictoryOrDefeat();
-		CooldownTimer();	
+		CooldownTimer();
+		CooldownSprites();	
 		}
 	}
 
@@ -123,7 +132,7 @@ void Awake ()
 			}
 			if (actualTag == "Triangle")
 			{
-				if (ennemyHpBool1)
+				if (ennemyHpBool1 || ennemyHpBool2)
 				{
 					EnnemyHpBar();
 					actualTag = null;
@@ -168,10 +177,16 @@ void Awake ()
 		if (ennemyShield.fillAmount > 0)
 			{
 				ennemyHp.fillAmount -= hitEnnemyWithShield;
+				spriteIdle.SetActive(false);
+				spriteDamaged.SetActive(true);
+				spriteChanged = true;
 			}
 		if (ennemyShield.fillAmount == 0)
 			{
 				ennemyHp.fillAmount -= hitEnnemyWithoutShield;
+				spriteIdle.SetActive(false);
+				spriteDamaged.SetActive(true);
+				spriteChanged = true;
 			}
 	}
 
@@ -179,6 +194,9 @@ void Awake ()
 
 	{
 		ennemyShield.fillAmount -= ennemyShieldPerHit;
+		spriteIdle.SetActive(false);
+		spriteShielded.SetActive(true);
+		spriteChanged = true;
 	}
 
 	public void VictoryOrDefeat ()
@@ -235,7 +253,7 @@ void Awake ()
 			pHpBool = true;
 			timerActive = false;
 		}
-		if (playerHp.fillAmount >= 1 && pHpBool)
+		if (playerHp.fillAmount >= 1 && pHpBool && hpBool)
 		{
 			tutoBravo1.SetActive(true);
 			pHpBool = false;
@@ -252,6 +270,7 @@ void Awake ()
 			tutoBravo3.SetActive(true);
 			ennemyHpBool1 = false;
 			timerActive = false;
+			ennemyHpBool2 = true;
 		}
 	}
 	public void TutoHp1()
@@ -314,6 +333,28 @@ void Awake ()
 		timerActive = false;
 		tutoTimer.SetActive(false);
 		tutoFinalPanel.SetActive(true);
+	}
+	public void TutoFinalEnd()
+	{
+		timerActive = true;
+		tutoFinalPanel.SetActive(false);
+		hpBool = false;
+		pHpBool = true;
+
+	}
+	public void CooldownSprites(){
+		if (spriteChanged)
+		{
+			spriteTimerActual -= Time.deltaTime;
+			if (spriteTimerActual <= 0)
+			{
+				spriteTimerActual = initialSpriteTimer;
+				spriteDamaged.SetActive(false);
+				spriteShielded.SetActive(false);
+				spriteIdle.SetActive(true);
+			}
+		}
+		
 	}
 
 }
