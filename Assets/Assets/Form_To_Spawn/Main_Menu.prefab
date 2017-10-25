@@ -902,7 +902,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1644376367873830
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -914,7 +914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1645423674485670
 GameObject:
   m_ObjectHideFlags: 1
@@ -997,7 +997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1688085282598022
 GameObject:
   m_ObjectHideFlags: 1
@@ -1275,7 +1275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1823177359933534
 GameObject:
   m_ObjectHideFlags: 1
@@ -5380,7 +5380,6 @@ RectTransform:
   - {fileID: 224471646164863254}
   - {fileID: 224575145838859690}
   - {fileID: 224157550245701948}
-  - {fileID: 224784389406026864}
   m_Father: {fileID: 224996104607643486}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5587,7 +5586,7 @@ RectTransform:
   - {fileID: 224066585306655106}
   - {fileID: 224731436783842874}
   m_Father: {fileID: 224996104607643486}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6663,15 +6662,15 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1644376367873830}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224245103759964850}
   - {fileID: 224810973742369658}
   - {fileID: 224324789534901876}
-  m_Father: {fileID: 224002178331655186}
-  m_RootOrder: 5
+  m_Father: {fileID: 224996104607643486}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6971,6 +6970,7 @@ RectTransform:
   - {fileID: 224681298450483946}
   - {fileID: 224286235855955304}
   - {fileID: 224002178331655186}
+  - {fileID: 224784389406026864}
   - {fileID: 224112590671163578}
   m_Father: {fileID: 0}
   m_RootOrder: 0
