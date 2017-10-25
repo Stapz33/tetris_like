@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 937ef2474654be14482bb75da1e8380f
-timeCreated: 1508859469
+timeCreated: 1508917688
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -129,10 +129,10 @@ TextureImporter:
       name: Img_Bouton_Rectangle
       rect:
         serializedVersion: 2
-        x: 111
-        y: 2784
-        width: 499
-        height: 125
+        x: 2791
+        y: 102
+        width: 1364
+        height: 319
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,10 +143,10 @@ TextureImporter:
       name: Img_Bouton_Carre
       rect:
         serializedVersion: 2
-        x: 151
-        y: 2588
-        width: 128
-        height: 129
+        x: 4489
+        y: 124
+        width: 304
+        height: 300
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,7 +274,7 @@ TextureImporter:
         width: 1082
         height: 1350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,7 +288,7 @@ TextureImporter:
         width: 1549
         height: 1151
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,7 +302,7 @@ TextureImporter:
         width: 1047
         height: 1845
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
