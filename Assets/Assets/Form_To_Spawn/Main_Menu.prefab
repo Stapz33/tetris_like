@@ -2433,10 +2433,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\nPrincipe :\n\nVenez \xE0 bout de vos adversaires grace au pouvoir des
-    gemmes. Mais prenez garde vous n'\xE8tes pas immortels et le chemin vers la gloire
-    est parsem\xE9 d'ennemies. Associez 3 gemmes de la m\xEAme cat\xE9gorie pour d\xE9clencher
-    leur pouvoir.\n"
+  m_Text: "\nPrincipe :\n\nVenez \xE0 bout de vos adversaires gr\xE2ce au pouvoir
+    des gemmes. Mais prenez garde vous n'\xEAtes pas immortels et le chemin vers la
+    gloire est parsem\xE9 d'ennemis. Associez 3 gemmes de la m\xEAme cat\xE9gorie
+    pour d\xE9clencher leur pouvoir.\n"
 --- !u!114 &114303603124277384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2510,7 +2510,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Voulez vous voir le tutoriel ?
+  m_Text: Voulez-vous voir le tutoriel ?
 --- !u!114 &114347401200570554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2983,7 +2983,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Vous avez bien restor\xE9 vos vies\n\n"
+  m_Text: "Vous avez bien restaur\xE9 vos vies\n\n"
 --- !u!114 &114514876311892892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4015,7 +4015,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10 boosts pour chaques gemmes
+  m_Text: 10 boosts pour chaque gemmes
 --- !u!114 &114796835802230768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4291,7 +4291,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5 boosts pour chaques gemmes
+  m_Text: 5 boosts pour chaque gemmes
 --- !u!114 &114849640856363234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4484,17 +4484,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.85
-  m_Text: "Gemmes et adversaires :\n\nla bar verte repr\xE9sente votre vie, elle descend
-    au fur et \xE0 mesure de la partie, les gemme verte permettent de r\xE9cuperer
-    une partie de votre vie.\n\nLa bar bleu repr\xE9sente le bouclier de votre adversaire.
-    les gemmes bleu permette lui retirer du bouclier.\n\nLa vie de votre adversaire
-    est repr\xE9sent\xE9e par une bar rouge, les gemmes rouges permettent de faire
-    perdre de la vie \xE0 votre adversaire, mais attention si il poss\xE8de encore
-    du bouclier, les d\xE9gats seront largement r\xE9duits.\n\nLe timer repr\xE9sente
-    le temps restant pour faire une combinaison avant que le tableau se m\xE9lange
-    de nouveau. Attention, si le timer arrive \xE0 zero, le bouclier de l'ennemie
-    se reg\xE9nerera en partie.\n\nLa partie se termine si la vie de votre adversaire
-    (victore) ou\nla votre (d\xE9faite) arrive \xE0 0.\n"
+  m_Text: "Gemmes et adversaires :\n\nLa barrre verte repr\xE9sente votre vie, elle
+    descend au fur et \xE0 mesure de la partie, les gemmes vertes permettent de r\xE9cuperer
+    une partie de votre vie.\n\nLa barre bleue repr\xE9sente le bouclier de votre
+    adversaire. Les gemmes bleues permettent de lui retirer du bouclier.\n\nLa vie
+    de votre adversaire est repr\xE9sent\xE9e par une barre rouge, les gemmes rouges
+    permettent de faire perdre de la vie \xE0 votre adversaire, mais attention si
+    il poss\xE8de encore du bouclier, les d\xE9g\xE2ts seront largement r\xE9duits.\n\nLe
+    timer repr\xE9sente le temps restant pour faire une combinaison avant que le tableau
+    se m\xE9lange de nouveau. Attention, si le timer arrive \xE0 z\xE9ro, le bouclier
+    de l'ennemi se reg\xE9n\xE8rera en partie.\n\nLa partie se termine si la vie de
+    votre adversaire (victoire) ou\nla v\xF4tre (d\xE9faite) arrive \xE0 0.\n"
 --- !u!114 &114885771657121276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4861,7 +4861,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1 boost pour chaques gemmes
+  m_Text: 1 boost pour chaque gemmes
 --- !u!114 &114990051436999762
 MonoBehaviour:
   m_ObjectHideFlags: 1
