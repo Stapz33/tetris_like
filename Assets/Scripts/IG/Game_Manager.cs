@@ -28,6 +28,7 @@ public class Game_Manager : MonoBehaviour {
 	public GameObject spriteIdle;
 	public GameObject spriteShielded;
 	public GameObject spriteDamaged;
+	public GameObject shieldFB;
 
 	public Button greenBoost;
 	public Button blueBoost;
@@ -97,6 +98,8 @@ void Awake ()
 		NoLifeIG();
 		CheckBoostsNb();
 		CheckBoostsDispo();
+		CheckShieldBroken();
+		Debug.Log(ennemyShield.fillAmount);
 	}
 
 	public void OnClickRune (GameObject shapeInUse)
@@ -247,7 +250,7 @@ void Awake ()
 			isSelectionActive = false;
 		}
 	}
-	public void ReturnToMenu()
+	public void Abandonne()
 	{
 		Time.timeScale = 1;
 		Life_Manager.Instance().SubstractLife();
@@ -390,5 +393,23 @@ void Awake ()
 		greenBoostActive = false;
 		blueBoostActive = false;
 		redBoostActive = false;
+	}
+	public void ReturnToMenu()
+	{
+		Time.timeScale = 1;
+		SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
+	}
+
+	public void CheckShieldBroken()
+	{
+		if (ennemyShield.fillAmount <= 0)
+		{
+			ennemyShield.fillAmount = 0;
+			shieldFB.SetActive(true);
+		}
+		if (ennemyShield.fillAmount > 0)
+		{
+			shieldFB.SetActive(false);
+		}
 	}
 }
