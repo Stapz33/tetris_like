@@ -11,6 +11,9 @@ public class Game_Manager : MonoBehaviour {
 	private bool endGame = false;
 	private bool spriteChanged = false;
 	private bool noLifeIG = false;
+	private bool greenBoostActive = false;
+	private bool blueBoostActive = false;
+	private bool redBoostActive = false;
 
 	private string actualTag ;
 	private string shapeTag;
@@ -26,8 +29,15 @@ public class Game_Manager : MonoBehaviour {
 	public GameObject spriteShielded;
 	public GameObject spriteDamaged;
 
+	public Button greenBoost;
+	public Button blueBoost;
+	public Button redBoost;
+
 	private int actualMatchs = 0 ;
 	public int lifeLostPerSeconds;
+	private int greenBoostNb;
+	private int blueBoostNb;
+	private int redBoostNb;
 
 	public float hitEnnemyWithShield;
 	public float hitEnnemyWithoutShield;
@@ -77,6 +87,8 @@ void Awake ()
 		CooldownSprites();
 		}
 		NoLifeIG();
+		CheckBoostsNb();
+		CheckBoostsDispo();
 	}
 
 	public void OnClickRune (GameObject shapeInUse)
@@ -134,6 +146,10 @@ void Awake ()
 	public void PlayerHpBar ()
 
 	{
+		if (greenBoostActive)
+		{
+			playerHp.fillAmount += 0.2f;
+		}
 		playerHp.fillAmount += 0.2f;
 	}
 
@@ -148,6 +164,10 @@ void Awake ()
 	{
 		if (ennemyShield.fillAmount > 0)
 			{
+				if (redBoostActive)
+				{
+					ennemyHp.fillAmount -= hitEnnemyWithShield;
+				}
 				ennemyHp.fillAmount -= hitEnnemyWithShield;
 				spriteIdle.SetActive(false);
 				spriteDamaged.SetActive(true);
@@ -155,6 +175,10 @@ void Awake ()
 			}
 		if (ennemyShield.fillAmount == 0)
 			{
+				if (redBoostActive)
+				{
+					ennemyHp.fillAmount -= hitEnnemyWithoutShield;
+				}
 				ennemyHp.fillAmount -= hitEnnemyWithoutShield;
 				spriteIdle.SetActive(false);
 				spriteDamaged.SetActive(true);
@@ -165,6 +189,10 @@ void Awake ()
 	public void EnnemyShieldBar ()
 
 	{
+		if(blueBoostActive)
+		{
+			ennemyShield.fillAmount -= ennemyShieldPerHit;
+		}
 		ennemyShield.fillAmount -= ennemyShieldPerHit;
 		spriteIdle.SetActive(false);
 		spriteShielded.SetActive(true);
@@ -270,5 +298,64 @@ void Awake ()
 	{
 		noLifeIG = Life_Manager.Instance().NoLifeAsk();
 	}
+	public void CheckBoostsNb()
+	{
+		redBoostNb = Boost_Manager.Instance().ReturnBlue();
+		blueBoostNb = Boost_Manager.Instance().ReturnGreen();
+		greenBoostNb = Boost_Manager.Instance().ReturnRed();
+	}
 
+	public void UseBoostGreen()
+	{
+		greenBoostActive = true;
+		Boost_Manager.Instance().UseBoostGreen();
+	}
+	public void UseBoostBlue()
+	{
+		blueBoostActive = true;
+		Boost_Manager.Instance().UseBoostBlue();
+	}
+	public void UseBoostred()
+	{
+		redBoostActive = true;
+		Boost_Manager.Instance().UseBoostRed();
+	}
+	public void CheckBoostsDispo()
+	{
+		if (redBoostNb == 0)
+		{
+			redBoost.interactable = false;
+		}
+
+		if (blueBoostNb == 0)
+		{
+			blueBoost.interactable = false;
+		}
+
+		if (greenBoostNb == 0)
+		{
+			greenBoost.interactable = false;
+		}
+		if (redBoostNb > 0)
+		{
+			redBoost.interactable = true;
+		}
+
+		if (blueBoostNb > 0)
+		{
+			blueBoost.interactable = true;
+		}
+
+		if (greenBoostNb > 0)
+		{
+			greenBoost.interactable = true;
+		}
+	}
+
+	void OnDestroy()
+	{
+		greenBoostActive = false;
+		blueBoostActive = false;
+		redBoostActive = false;
+	}
 }

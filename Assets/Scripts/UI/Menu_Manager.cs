@@ -17,6 +17,7 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject lifeThree;
 	public GameObject shopPanel;
 	public GameObject lifeShopPanel;
+	public GameObject lfsConfirm;
 
 	private static bool tutoPassed = false;
 	private static bool acceuilPassed = false;
@@ -190,5 +191,10 @@ void Awake ()
 	public void BuyLife()
 	{
 		Life_Manager.Instance().ResetLifes();
+		lfsConfirm.SetActive(true);
+	}
+	public void ConfirmLFS()
+	{
+		lfsConfirm.SetActive(false);
 	}
 }
