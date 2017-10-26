@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 937ef2474654be14482bb75da1e8380f
-timeCreated: 1509005358
+timeCreated: 1509012888
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -20,6 +20,7 @@ TextureImporter:
     21300026: Ennemi_Momie_Mort
     21300028: Ennemi_Sarco_Mort
     21300030: Main_Icone
+    21300032: Timer_Icone
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -316,6 +317,20 @@ TextureImporter:
         y: 3282
         width: 395
         height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Timer_Icone
+      rect:
+        serializedVersion: 2
+        x: 6960
+        y: 499
+        width: 694
+        height: 1179
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
