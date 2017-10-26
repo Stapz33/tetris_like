@@ -21,6 +21,7 @@ public class Game_Manager : MonoBehaviour {
 	public Image playerHp;
 	public Image ennemyHp;
 	public Image ennemyShield;
+	public Image timerImage;
 
 	public GameObject winPanel;
 	public GameObject losePanel;
@@ -37,6 +38,10 @@ public class Game_Manager : MonoBehaviour {
 	public Button greenBoostI;
 	public Button blueBoostI;
 	public Button redBoostI;
+
+	public AudioClip gemSound, shieldSound, lifeSound, damageSound, shieldBSound, victorySound, defeatSound, clickSound, timerSound, boostSound;
+	public AudioSource audio;
+	public AudioSource audiomanag;
 
 	private int actualMatchs = 0 ;
 	public int lifeLostPerSeconds;
@@ -98,8 +103,6 @@ void Awake ()
 		NoLifeIG();
 		CheckBoostsNb();
 		CheckBoostsDispo();
-		CheckShieldBroken();
-		Debug.Log(ennemyShield.fillAmount);
 	}
 
 	public void OnClickRune (GameObject shapeInUse)
@@ -108,6 +111,8 @@ void Awake ()
 		shapeTag = shapeInUse.tag;
 		if (isSelectionActive && actualMatchs < 3)
 		{
+			audio.clip = gemSound;
+		audio.Play();
 			if (actualTag == shapeTag)
 			{
 				shapeInUse.GetComponent<Button>().interactable = false;
@@ -117,6 +122,8 @@ void Awake ()
 		}
 		if (!isSelectionActive && actualMatchs == 0)
 		{
+			audio.clip = gemSound;
+		audio.Play();
 			actualTag = shapeTag;
 			actualMatchs += 1;
 			isSelectionActive = true;
@@ -132,11 +139,17 @@ void Awake ()
 		{
 			if (actualTag == "Cube")
 			{
+
+			audio.clip = lifeSound;
+		audio.Play();
 				PlayerHpBar();
 				actualTag = null;
 			}
 			if (actualTag == "Triangle")
 			{
+
+			audio.clip = damageSound;
+		audio.Play();
 				EnnemyHpBar();
 				actualTag = null;
 			}
@@ -205,6 +218,7 @@ void Awake ()
 			ennemyShield.fillAmount -= ennemyShieldPerHit;
 		}
 		ennemyShield.fillAmount -= ennemyShieldPerHit;
+		CheckShieldBroken();
 		spriteIdle.SetActive(false);
 		spriteShielded.SetActive(true);
 		spriteChanged = true;
@@ -214,6 +228,9 @@ void Awake ()
 	{
 		if (playerHp.fillAmount == 0f)
 		{
+			audiomanag.Stop();
+			audio.clip = defeatSound;
+		audio.Play();
 			losePanel.SetActive(true);
 			endGame = true;
 			Life_Manager.Instance().SubstractLife();
@@ -222,6 +239,9 @@ void Awake ()
 		}
 		if (ennemyHp.fillAmount == 0f)
 		{
+			audiomanag.Stop();
+			audio.clip = victorySound;
+		audio.Play();
 			winPanel.SetActive(true);
 			endGame = true;
 		}
@@ -238,12 +258,14 @@ void Awake ()
 
 	{
 		tmpTimer -= Time.deltaTime;
-		timer.text = tmpTimer.ToString("F1") + "s";
+		timerImage.fillAmount = tmpTimer / timerInSeconds;
 		if (tmpTimer <= 0.0f)
 		{
 			tmpTimer = 0;
 			ResetTimer();
 			ennemyShield.fillAmount += ennemyShieldRecover;
+			audio.clip = timerSound;
+		audio.Play();
 			Spawn_Manager.Instance().UnSpawnForms();
 			Spawn_Manager.Instance().StartingIdx();
 			actualMatchs = 0;
@@ -258,27 +280,37 @@ void Awake ()
 	}
 	public void ContinueToPlay()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		if (!noLifeIG)
 		{
+		
 			SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
 		}
 		
 	}
 	public void RetryToPlay()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		if (!noLifeIG)
 		{
+
 			SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
 		}
 		
 	}
 
 	public void OnClickPause(){
+		audio.clip = clickSound;
+		audio.Play();
 		pausePanel.SetActive(true);
 		Time.timeScale = 0;
 	}
 
 	public void OnClickQuitPause(){
+		audio.clip = clickSound;
+		audio.Play();
 		pausePanel.SetActive(false);
 		Time.timeScale = 1;
 	}
@@ -298,6 +330,8 @@ void Awake ()
 	}
 	public void RetryToPlayLVL2()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		if (!noLifeIG)
 		{
 			SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
@@ -324,6 +358,8 @@ void Awake ()
 	{
 		if (greenBoostNb > 0)
 		{
+			audio.clip = boostSound;
+		audio.Play();
 		greenBoostActive = true;
 		Boost_Manager.Instance().UseBoostGreen();
 		greenBoost.interactable = false;
@@ -334,6 +370,8 @@ void Awake ()
 	{
 		if (blueBoostNb > 0)
 		{
+			audio.clip = boostSound;
+		audio.Play();
 		blueBoostActive = true;
 		Boost_Manager.Instance().UseBoostBlue();
 		blueBoost.interactable = false;
@@ -344,6 +382,8 @@ void Awake ()
 	{
 		if (redBoostNb > 0)
 		{
+			audio.clip = boostSound;
+		audio.Play();
 		redBoostActive = true;
 		Boost_Manager.Instance().UseBoostRed();
 		redBoost.interactable = false;
@@ -396,6 +436,8 @@ void Awake ()
 	}
 	public void ReturnToMenu()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		Time.timeScale = 1;
 		SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
 	}
@@ -406,9 +448,13 @@ void Awake ()
 		{
 			ennemyShield.fillAmount = 0;
 			shieldFB.SetActive(true);
+			audio.clip = shieldBSound;
+		audio.Play();
 		}
 		if (ennemyShield.fillAmount > 0)
 		{
+			audio.clip = shieldSound;
+		audio.Play();
 			shieldFB.SetActive(false);
 		}
 	}

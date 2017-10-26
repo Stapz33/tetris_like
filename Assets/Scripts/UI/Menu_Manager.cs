@@ -20,6 +20,9 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject lfsConfirm;
 	public GameObject bsConfirm;
 
+	public AudioClip clickSound, beginSound, shopBuy;
+	public AudioSource audio;
+
 	private static bool tutoPassed = false;
 	private static bool acceuilPassed = false;
 	private bool noLife = false;
@@ -49,6 +52,7 @@ void Awake ()
 	// Use this for initialization
 	void Start () {
 		AcceuilPassed();
+		audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -59,25 +63,34 @@ void Awake ()
 	}
 
 	public void PlayOnClick(){
+		audio.clip = clickSound;
+		audio.Play();
 		mainMenu.SetActive(false);
 		boardLevels.SetActive(true);
 		//renseigner le bon nom de scene
 	}
 
 	public void QuitOnClick(){
+		audio.clip = clickSound;
+		audio.Play();
 		acceuilPassed = false;
 		Application.Quit();
 		Debug.Log("Quit");
 	}
 
 	public void ReturnToMenu(){
+		audio.clip = clickSound;
+		audio.Play();
 		boardLevels.SetActive(false);
 		mainMenu.SetActive(true);
 
 	}
 	public void LvlOne (){
+		audio.clip = clickSound;
+		audio.Play();
 		if (tutoPassed == false)
 		{
+
 			askTuto.SetActive(true);
 			tutoPassed = true;
 			return;
@@ -89,6 +102,8 @@ void Awake ()
 		
 	}
 	public void LvlTwo (){
+		audio.clip = clickSound;
+		audio.Play();
 		if (!noLife)
 		{
 			SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
@@ -96,25 +111,36 @@ void Awake ()
 		
 	}
 	public void YesToTuto(){
+		audio.clip = clickSound;
+		audio.Play();
 		askTuto.SetActive(false);
 		tutoOne.SetActive(true);
 	}
 	public void NoToTuto(){
+		audio.clip = clickSound;
+		audio.Play();
 		askTuto.SetActive(false);
 		boardLevels.SetActive(true);
 	}
 	public void NextTuto(){
+		audio.clip = clickSound;
+		audio.Play();
 		tutoOne.SetActive(false);
 		tutoTwo.SetActive(true);
 	}
 	public void EndTuto(){
+		audio.clip = clickSound;
+		audio.Play();
 		if (!noLife)
 		{
+
 			SceneManager.LoadScene("LVLT_Scene", LoadSceneMode.Single);
 		}
 		
 	}
 	public void EndCanvasTuto(){
+		audio.clip = clickSound;
+		audio.Play();
 		boardLevels.SetActive(true);
 		mainMenu.SetActive(false);
 		tutoTwo.SetActive(false);
@@ -122,6 +148,8 @@ void Awake ()
 	}
 	public void AcceuilToMenu()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 			acceuilPanel.SetActive(false);
 			acceuilPassed = true;	
 	}
@@ -162,6 +190,8 @@ void Awake ()
 	public void AcceuilPassed(){
 		if (acceuilPassed)
 		{
+			audio.clip = clickSound;
+		audio.Play();
 			acceuilPanel.SetActive(false);
 		}
 	}
@@ -175,46 +205,66 @@ void Awake ()
 	}
 	public void CloseShop()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		shopPanel.SetActive(false);
 	}
 	public void OpenShop()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		shopPanel.SetActive(true);
 	}
 	public void OpenLifeShop()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		lifeShopPanel.SetActive(true);
 	}
 	public void CloseLifeShop()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		lifeShopPanel.SetActive(false);
 	}
 	public void BuyLife()
 	{
+		audio.clip = shopBuy;
+		audio.Play();
 		Life_Manager.Instance().ResetLifes();
 		lfsConfirm.SetActive(true);
 	}
 	public void ConfirmLFS()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		lfsConfirm.SetActive(false);
 	}
 	public void BuyBoost1()
 	{
+		audio.clip = shopBuy;
+		audio.Play();
 		Boost_Manager.Instance().AddBoost1();
 		bsConfirm.SetActive(true);
 	}
 	public void BuyBoost2()
 	{
+		audio.clip = shopBuy;
+		audio.Play();
 		Boost_Manager.Instance().AddBoost2();
 		bsConfirm.SetActive(true);
 	}
 	public void BuyBoost3()
 	{
+		audio.clip = shopBuy;
+		audio.Play();
 		Boost_Manager.Instance().AddBoost3();
 		bsConfirm.SetActive(true);
 	}
 	public void ConfirmBS1()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		bsConfirm.SetActive(false);
 	}	
 

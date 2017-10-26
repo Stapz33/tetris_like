@@ -22,6 +22,7 @@ public class Tuto_Manager : MonoBehaviour {
 	public Image playerHp;
 	public Image ennemyHp;
 	public Image ennemyShield;
+	public Image timerImage;
 
 	public GameObject winPanel;
 	public GameObject tutoHpPanel1;
@@ -39,6 +40,11 @@ public class Tuto_Manager : MonoBehaviour {
 	public GameObject spriteIdle;
 	public GameObject spriteShielded;
 	public GameObject spriteDamaged;
+	public GameObject shieldFB;
+
+	public AudioClip gemSound, shieldSound, lifeSound, damageSound, shieldBSound, victorySound, defeatSound, clickSound;
+	public AudioSource audio;
+	public AudioSource audiomanag;
 
 	private int actualMatchs = 0 ;
 	public int lifeLostPerSeconds;
@@ -100,6 +106,8 @@ void Awake ()
 		shapeTag = shapeInUse.tag;
 		if (isSelectionActive && actualMatchs < 3)
 		{
+			audio.clip = gemSound;
+		audio.Play();
 			if (actualTag == shapeTag)
 			{
 				shapeInUse.GetComponent<Button>().interactable = false;
@@ -109,6 +117,8 @@ void Awake ()
 		}
 		if (!isSelectionActive && actualMatchs == 0)
 		{
+			audio.clip = gemSound;
+		audio.Play();
 			actualTag = shapeTag;
 			actualMatchs += 1;
 			isSelectionActive = true;
@@ -126,6 +136,8 @@ void Awake ()
 			{
 				if (pHpBool)
 				{
+					audio.clip = lifeSound;
+		audio.Play();
 				PlayerHpBar();
 				actualTag = null;
 				}
@@ -134,6 +146,8 @@ void Awake ()
 			{
 				if (ennemyHpBool1 || ennemyHpBool2)
 				{
+					audio.clip = damageSound;
+		audio.Play();
 					EnnemyHpBar();
 					actualTag = null;
 				}
@@ -194,6 +208,7 @@ void Awake ()
 
 	{
 		ennemyShield.fillAmount -= ennemyShieldPerHit;
+		CheckShieldBroken();
 		spriteIdle.SetActive(false);
 		spriteShielded.SetActive(true);
 		spriteChanged = true;
@@ -205,6 +220,9 @@ void Awake ()
 		{
 			winPanel.SetActive(true);
 			endGame = true;
+			audiomanag.Stop();
+			audio.clip = victorySound;
+		audio.Play();
 		}
 	}
 
@@ -221,7 +239,7 @@ void Awake ()
 		if (timerActive)
 		{
 		tmpTimer -= Time.deltaTime;
-		timer.text = tmpTimer.ToString("F2") + "s";
+		timerImage.fillAmount = tmpTimer / timerInSeconds;
 		if (tmpTimer <= 0.0f)
 		{
 			tmpTimer = 0;
@@ -234,14 +252,20 @@ void Awake ()
 	}
 	public void ReturnToMenu()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
 	}
 	public void ContinueToPlay()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
 	}
 	public void RetryToPlay()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
 	}
 	public void TutoUpdate()
@@ -275,67 +299,91 @@ void Awake ()
 	}
 	public void TutoHp1()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		tutoHpPanel1.SetActive(false);
 		tutoHpPanel2.SetActive(true);
 	}
 
 	public void TutoHp2()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		tutoHpPanel2.SetActive(false);
 		timerActive = true;
 	}
 	public void TutoBravo1()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		tutoBravo1.SetActive(false);
 		tutoShieldPanel1.SetActive(true);
 	}
 
 	public void TutoShield1()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		tutoShieldPanel1.SetActive(false);
 		tutoShieldPanel2.SetActive(true);
 	}
 	public void TutoShield2()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		tutoShieldPanel2.SetActive(false);
 		shieldBool1 = true;
 		timerActive = true;
 	}
 	public void TutoBravo2()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		tutoBravo2.SetActive(false);
 		tutoEnnemyPanel1.SetActive(true);
 	}
 	public void TutoEnnemy1()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		tutoEnnemyPanel1.SetActive(false);
 		tutoEnnemyPanel2.SetActive(true);
 	}
 	public void TutoEnnemy2()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		tutoEnnemyPanel2.SetActive(false);
 		ennemyHpBool1 = true;
 		timerActive = true;
 	}
 	public void TutoBravo3()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		tutoBravo3.SetActive(false);
 		tutoFinalEnnemy.SetActive(true);
 	}
 	public void TutoTimer()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		tutoFinalEnnemy.SetActive(false);
 		tutoTimer.SetActive(true);
 		timerActive = true;
 	}
 	public void TutoFinal()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		timerActive = false;
 		tutoTimer.SetActive(false);
 		tutoFinalPanel.SetActive(true);
 	}
 	public void TutoFinalEnd()
 	{
+		audio.clip = clickSound;
+		audio.Play();
 		timerActive = true;
 		tutoFinalPanel.SetActive(false);
 		hpBool = false;
@@ -356,5 +404,21 @@ void Awake ()
 		}
 		
 	}
-
+	public void CheckShieldBroken()
+	{
+		if (ennemyShield.fillAmount <= 0)
+		{
+			ennemyShield.fillAmount = 0;
+			shieldFB.SetActive(true);
+			audio.clip = shieldBSound;
+		audio.Play();
+		}
+		if (ennemyShield.fillAmount > 0)
+		{
+			audio.clip = shieldSound;
+		audio.Play();
+			shieldFB.SetActive(false);
+		}
+	}
 }
+
