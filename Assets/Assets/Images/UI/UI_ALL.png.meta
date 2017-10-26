@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 420e0dc269cb2234c95e135da9319fd9
-timeCreated: 1508858064
+timeCreated: 1509046807
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -58,6 +58,7 @@ TextureImporter:
     21300102: Shield
     21300104: Attaque_Shield
     21300106: Attaque_Vie
+    21300108: Niveau_Boss
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -420,10 +421,10 @@ TextureImporter:
       name: Niveau_01
       rect:
         serializedVersion: 2
-        x: 3905
-        y: 2143
-        width: 621
-        height: 649
+        x: 3904
+        y: 2117
+        width: 622
+        height: 672
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -677,7 +678,7 @@ TextureImporter:
         width: 237
         height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -691,7 +692,7 @@ TextureImporter:
         width: 240
         height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -705,7 +706,7 @@ TextureImporter:
         width: 240
         height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -719,7 +720,7 @@ TextureImporter:
         width: 641
         height: 587
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -732,6 +733,20 @@ TextureImporter:
         y: 109
         width: 691
         height: 935
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Niveau_Boss
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 1189
+        width: 622
+        height: 670
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
