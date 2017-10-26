@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main_Scenes/LVL2_Scene.unity
     guid: e21ef0e426006b841b0c9cd53db53f31
+  - enabled: 1
+    path: Assets/Scenes/Main_Scenes/LVL3_Scene.unity
+    guid: 9b247100da813f646946dc5b11530e56

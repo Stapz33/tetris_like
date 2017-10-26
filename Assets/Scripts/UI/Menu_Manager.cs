@@ -24,6 +24,7 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject loadingScreen;
 	public GameObject buttonLock;
 	public GameObject buttonUnlock;
+	public GameObject resetLvl;
 
 
 	public AudioClip clickSound, beginSound, shopBuy;
@@ -70,6 +71,7 @@ void Awake ()
 		NoLifes();
 		LoadLifes();
 		lvlUnlock = Life_Manager.Instance().ReturnLVL3();
+		CheckLvl3();
 	}
 
 	public void PlayOnClick(){
@@ -128,6 +130,16 @@ void Awake ()
 			buttonLock.SetActive(false);
 			buttonUnlock.SetActive(true);
 		}
+		if (!lvlUnlock)
+		{
+			buttonLock.SetActive(true);
+			buttonUnlock.SetActive(false);
+		}
+	}
+
+	public void ResetLvl()
+	{
+		Life_Manager.Instance().LockLvl();
 	}
 		
 

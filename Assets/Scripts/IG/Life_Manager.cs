@@ -109,6 +109,7 @@ void Awake ()
 	}
 
 	public void SetDateTimer(){
+		lvlUnlock = Convert.ToBoolean(PlayerPrefs.GetInt("lvlUnlock"));
 		lifeCount = PlayerPrefs.GetInt("lifeCount");
 		Debug.Log(lifeCount);
 		 currentDate = DateTime.Now;
@@ -165,6 +166,7 @@ void Awake ()
 	}
 	public void OnApplicationQuit()
 	{
+		PlayerPrefs.SetInt("lvlUnlock",lvlUnlock ? 1 : 0);
 		PlayerPrefs.SetInt("lifeCount",lifeCount);
 		PlayerPrefs.SetFloat("timerOffline",timerOffline);
 		PlayerPrefs.SetString("currentTIme", DateTime.Now.ToString());
@@ -176,5 +178,9 @@ void Awake ()
 	public void UnlockLvl()
 	{
 		lvlUnlock = true;
+	}
+	public void LockLvl()
+	{
+		lvlUnlock = false;
 	}
 }

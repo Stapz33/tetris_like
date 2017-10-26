@@ -32,6 +32,7 @@ public class Game_Manager : MonoBehaviour {
 	public GameObject shieldFB;
 	public GameObject confirmQuit;
 	public GameObject loadingScreen;
+	public GameObject congratPanel;
 
 	public Button greenBoost;
 	public Button blueBoost;
@@ -245,9 +246,14 @@ void Awake ()
 		}
 		if (ennemyHp.fillAmount == 0f)
 		{
-			if (SceneManager.GetActiveScene().ToString() == "LVL2_Scene")
+			if (SceneManager.GetActiveScene().name.ToString() == "LVL2_Scene")
 			{
 				Life_Manager.Instance().UnlockLvl();
+			}
+			if (SceneManager.GetActiveScene().name.ToString() == "LVL3_Scene")
+			{
+				Boost_Manager.Instance().AddBoost1();
+				congratPanel.SetActive(true);
 			}
 			audiomanag.Stop();
 			audio.clip = victorySound;
@@ -262,6 +268,11 @@ void Awake ()
 	{
 		// respawn shapes ICI !
 		tmpTimer = timerInSeconds;
+	}
+
+	public void CloseCongrat()
+	{
+		congratPanel.SetActive(false);
 	}
 
 	public void CooldownTimer()
