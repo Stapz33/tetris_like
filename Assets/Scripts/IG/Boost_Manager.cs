@@ -31,6 +31,7 @@ void Awake ()
 	// Use this for initialization
 	void Start () {
 		DontDestroyOnLoad(gameObject);
+		LoadPrefs();
 	}
 	
 	// Update is called once per frame
@@ -83,6 +84,18 @@ void Awake ()
 	public void UseBoostRed()
 	{
 		redBoostNb -= 1;
+	}
+	public void OnApplicationQuit()
+	{
+		PlayerPrefs.SetInt("redBoostNb",redBoostNb);
+		PlayerPrefs.SetInt("blueBoostNb",blueBoostNb);
+		PlayerPrefs.SetInt("greenBoostNb", greenBoostNb);
+	}
+	public void LoadPrefs()
+	{
+		redBoostNb = PlayerPrefs.GetInt("redBoostNb");
+		greenBoostNb = PlayerPrefs.GetInt("greenBoostNb");
+		blueBoostNb = PlayerPrefs.GetInt("blueBoostNb");
 	}
 
 

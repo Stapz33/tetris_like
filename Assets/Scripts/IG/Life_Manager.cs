@@ -158,14 +158,14 @@ void Awake ()
          }
  
 	}
-	public void SaveTimer ()
+	public void ResetLifes()
+	{
+		lifeCount = 3;
+	}
+	public void OnApplicationQuit()
 	{
 		PlayerPrefs.SetInt("lifeCount",lifeCount);
 		PlayerPrefs.SetFloat("timerOffline",timerOffline);
 		PlayerPrefs.SetString("currentTIme", DateTime.Now.ToString());
-	}
-	public void ResetLifes()
-	{
-		lifeCount = 3;
 	}
 }

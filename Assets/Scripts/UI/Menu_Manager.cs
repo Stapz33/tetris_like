@@ -19,9 +19,12 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject lifeShopPanel;
 	public GameObject lfsConfirm;
 	public GameObject bsConfirm;
+	public GameObject splashScreen;
 
 	public AudioClip clickSound, beginSound, shopBuy;
 	public AudioSource audio;
+	public AudioSource audioMain;
+	public AudioSource audioSplash;
 
 	private static bool tutoPassed = false;
 	private static bool acceuilPassed = false;
@@ -190,18 +193,15 @@ void Awake ()
 	public void AcceuilPassed(){
 		if (acceuilPassed)
 		{
-			audio.clip = clickSound;
-		audio.Play();
 			acceuilPanel.SetActive(false);
+			splashScreen.SetActive(false);
+			audioSplash.Stop();
+			audioMain.Play();
 		}
 	}
 	public void NoLifes()
 	{
 		noLife = Life_Manager.Instance().NoLifeAsk();
-	}
-	public void OnApplicationQuit()
-	{
-		Life_Manager.Instance().SaveTimer();
 	}
 	public void CloseShop()
 	{
@@ -267,5 +267,10 @@ void Awake ()
 		audio.Play();
 		bsConfirm.SetActive(false);
 	}	
+	public void SplashScreen()
+	{
+		splashScreen.SetActive(false);
+		audioMain.Play();
+	}
 
 }

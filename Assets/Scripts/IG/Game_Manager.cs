@@ -30,6 +30,7 @@ public class Game_Manager : MonoBehaviour {
 	public GameObject spriteShielded;
 	public GameObject spriteDamaged;
 	public GameObject shieldFB;
+	public GameObject confirmQuit;
 
 	public Button greenBoost;
 	public Button blueBoost;
@@ -272,11 +273,19 @@ void Awake ()
 			isSelectionActive = false;
 		}
 	}
-	public void Abandonne()
+	public void ComfirmQuit()
 	{
 		Time.timeScale = 1;
 		Life_Manager.Instance().SubstractLife();
 		SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
+	}
+	public void Abandonne()
+	{
+		confirmQuit.SetActive(true);
+	}
+	public void StopConfirm()
+	{
+		confirmQuit.SetActive(false);
 	}
 	public void ContinueToPlay()
 	{

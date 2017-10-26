@@ -41,6 +41,8 @@ public class Tuto_Manager : MonoBehaviour {
 	public GameObject spriteShielded;
 	public GameObject spriteDamaged;
 	public GameObject shieldFB;
+	public GameObject tutoBoost;
+	public GameObject boostPanel;
 
 	public AudioClip gemSound, shieldSound, lifeSound, damageSound, shieldBSound, victorySound, defeatSound, clickSound;
 	public AudioSource audio;
@@ -378,6 +380,14 @@ void Awake ()
 		audio.Play();
 		timerActive = false;
 		tutoTimer.SetActive(false);
+		tutoBoost.SetActive(true);
+		boostPanel.SetActive(true);
+	}
+	public void TutoBoost()
+	{
+		audio.clip = clickSound;
+		audio.Play();
+		tutoBoost.SetActive(false);
 		tutoFinalPanel.SetActive(true);
 	}
 	public void TutoFinalEnd()
