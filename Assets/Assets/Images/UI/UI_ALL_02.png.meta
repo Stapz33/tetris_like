@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 937ef2474654be14482bb75da1e8380f
-timeCreated: 1509012888
+timeCreated: 1509031367
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -21,6 +21,7 @@ TextureImporter:
     21300028: Ennemi_Sarco_Mort
     21300030: Main_Icone
     21300032: Timer_Icone
+    21300034: Barre_Chargement
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -331,6 +332,20 @@ TextureImporter:
         y: 499
         width: 694
         height: 1179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Barre_Chargement
+      rect:
+        serializedVersion: 2
+        x: 8118
+        y: 1298
+        width: 2884
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
