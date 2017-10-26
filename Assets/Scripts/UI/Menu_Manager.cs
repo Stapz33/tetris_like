@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.UI;
 
 public class Menu_Manager : MonoBehaviour {
 
@@ -20,6 +21,8 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject lfsConfirm;
 	public GameObject bsConfirm;
 	public GameObject splashScreen;
+	public GameObject loadingScreen;
+
 
 	public AudioClip clickSound, beginSound, shopBuy;
 	public AudioSource audio;
@@ -100,16 +103,36 @@ void Awake ()
 		}
 		if (tutoPassed && !noLife)
 		{
-			SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
+			loadingScreen.SetActive(true);
+			StartCoroutine(LoadScreen());
 		}
 		
+	}
+	IEnumerator LoadScreen()
+	{
+		yield return new WaitForSeconds(3f);
+		 AsyncOperation async = SceneManager.LoadSceneAsync("LVL1_Scene", LoadSceneMode.Single);
+
+	}
+	IEnumerator LoadScreen2()
+	{
+		yield return new WaitForSeconds(3f);
+		 AsyncOperation async = SceneManager.LoadSceneAsync("LVLT_Scene", LoadSceneMode.Single);
+
+	}
+	IEnumerator LoadScreen3()
+	{
+		yield return new WaitForSeconds(3f);
+		 AsyncOperation async = SceneManager.LoadSceneAsync("LVL2_Scene", LoadSceneMode.Single);
+
 	}
 	public void LvlTwo (){
 		audio.clip = clickSound;
 		audio.Play();
 		if (!noLife)
 		{
-			SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+			loadingScreen.SetActive(true);
+			StartCoroutine(LoadScreen3());
 		}
 		
 	}
@@ -136,8 +159,8 @@ void Awake ()
 		audio.Play();
 		if (!noLife)
 		{
-
-			SceneManager.LoadScene("LVLT_Scene", LoadSceneMode.Single);
+			loadingScreen.SetActive(true);
+			StartCoroutine(LoadScreen2());
 		}
 		
 	}

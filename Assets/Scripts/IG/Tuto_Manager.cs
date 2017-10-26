@@ -11,6 +11,7 @@ public class Tuto_Manager : MonoBehaviour {
 	private bool hpBool = false;
 	private bool pHpBool = false;
 	private bool shieldBool1 = false;
+	private bool shieldBool2 = false;
 	private bool ennemyHpBool1 = false;
 	private bool ennemyHpBool2 = false;
 	private bool timerActive = true;
@@ -43,6 +44,7 @@ public class Tuto_Manager : MonoBehaviour {
 	public GameObject shieldFB;
 	public GameObject tutoBoost;
 	public GameObject boostPanel;
+	public GameObject loadingScreen;
 
 	public AudioClip gemSound, shieldSound, lifeSound, damageSound, shieldBSound, victorySound, defeatSound, clickSound;
 	public AudioSource audio;
@@ -156,7 +158,7 @@ void Awake ()
 			}
 			if (actualTag == "Circle")
 			{
-				if (shieldBool1)
+				if (shieldBool1 || shieldBool2)
 				{
 				EnnemyShieldBar();
 				actualTag = null;
@@ -256,19 +258,15 @@ void Awake ()
 	{
 		audio.clip = clickSound;
 		audio.Play();
-		SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
-	}
-	public void ContinueToPlay()
-	{
-		audio.clip = clickSound;
-		audio.Play();
-		SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+		loadingScreen.SetActive(true);
+		StartCoroutine(LoadScreen9());
 	}
 	public void RetryToPlay()
 	{
 		audio.clip = clickSound;
 		audio.Play();
-		SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
+		loadingScreen.SetActive(true);
+		StartCoroutine(LoadScreen8());
 	}
 	public void TutoUpdate()
 	{
@@ -290,6 +288,7 @@ void Awake ()
 			tutoBravo2.SetActive(true);
 			shieldBool1 = false;
 			timerActive = false;
+			shieldBool2 = true;
 		}
 		if (ennemyHpBool1 && ennemyHp.fillAmount <= 0.8)
 		{
@@ -429,6 +428,18 @@ void Awake ()
 		audio.Play();
 			shieldFB.SetActive(false);
 		}
+	}
+	IEnumerator LoadScreen8()
+	{
+		yield return new WaitForSeconds(3f);
+		 AsyncOperation async = SceneManager.LoadSceneAsync("LVL1_Scene", LoadSceneMode.Single);
+
+	}
+	IEnumerator LoadScreen9()
+	{
+		yield return new WaitForSeconds(3f);
+		 AsyncOperation async = SceneManager.LoadSceneAsync("Menu_Scene", LoadSceneMode.Single);
+
 	}
 }
 

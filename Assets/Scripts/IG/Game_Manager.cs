@@ -31,6 +31,7 @@ public class Game_Manager : MonoBehaviour {
 	public GameObject spriteDamaged;
 	public GameObject shieldFB;
 	public GameObject confirmQuit;
+	public GameObject loadingScreen;
 
 	public Button greenBoost;
 	public Button blueBoost;
@@ -49,6 +50,7 @@ public class Game_Manager : MonoBehaviour {
 	private int greenBoostNb;
 	private int blueBoostNb;
 	private int redBoostNb;
+	public int lifeCount;
 
 	public float hitEnnemyWithShield;
 	public float hitEnnemyWithoutShield;
@@ -63,6 +65,7 @@ public class Game_Manager : MonoBehaviour {
 	public Text compterB;
 	public Text compterR;
 	public Text compterG;
+	public Text lifeText;
 
 
 	private static Game_Manager instance ;
@@ -104,6 +107,8 @@ void Awake ()
 		NoLifeIG();
 		CheckBoostsNb();
 		CheckBoostsDispo();
+		lifeCount = Life_Manager.Instance().SendLifeCount();
+		lifeText.text = " : " + lifeCount.ToString();
 	}
 
 	public void OnClickRune (GameObject shapeInUse)
@@ -277,7 +282,8 @@ void Awake ()
 	{
 		Time.timeScale = 1;
 		Life_Manager.Instance().SubstractLife();
-		SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
+		loadingScreen.SetActive(true);
+		StartCoroutine(LoadScreen4());
 	}
 	public void Abandonne()
 	{
@@ -293,8 +299,8 @@ void Awake ()
 		audio.Play();
 		if (!noLifeIG)
 		{
-		
-			SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+			loadingScreen.SetActive(true);
+		StartCoroutine(LoadScreen5());
 		}
 		
 	}
@@ -304,8 +310,8 @@ void Awake ()
 		audio.Play();
 		if (!noLifeIG)
 		{
-
-			SceneManager.LoadScene("LVL1_Scene", LoadSceneMode.Single);
+			loadingScreen.SetActive(true);
+		StartCoroutine(LoadScreen6());
 		}
 		
 	}
@@ -343,7 +349,8 @@ void Awake ()
 		audio.Play();
 		if (!noLifeIG)
 		{
-			SceneManager.LoadScene("LVL2_Scene", LoadSceneMode.Single);
+			loadingScreen.SetActive(true);
+		StartCoroutine(LoadScreen5());
 		}
 		
 	}
@@ -448,7 +455,8 @@ void Awake ()
 		audio.clip = clickSound;
 		audio.Play();
 		Time.timeScale = 1;
-		SceneManager.LoadScene("Menu_Scene", LoadSceneMode.Single);
+		loadingScreen.SetActive(true);
+		StartCoroutine(LoadScreen4());
 	}
 
 	public void CheckShieldBroken()
@@ -466,5 +474,23 @@ void Awake ()
 		audio.Play();
 			shieldFB.SetActive(false);
 		}
+	}
+	IEnumerator LoadScreen4()
+	{
+		yield return new WaitForSeconds(3f);
+		 AsyncOperation async = SceneManager.LoadSceneAsync("Menu_Scene", LoadSceneMode.Single);
+
+	}
+	IEnumerator LoadScreen5()
+	{
+		yield return new WaitForSeconds(3f);
+		 AsyncOperation async = SceneManager.LoadSceneAsync("LVL2_Scene", LoadSceneMode.Single);
+
+	}
+	IEnumerator LoadScreen6()
+	{
+		yield return new WaitForSeconds(3f);
+		 AsyncOperation async = SceneManager.LoadSceneAsync("LVL1_Scene", LoadSceneMode.Single);
+
 	}
 }
