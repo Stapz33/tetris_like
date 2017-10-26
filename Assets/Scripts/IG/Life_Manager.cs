@@ -8,6 +8,7 @@ public class Life_Manager : MonoBehaviour {
 	public int lifeCount = 3;
 
 	private bool noLife = false;
+	private bool lvlUnlock = false;
 
 	private float timerOffline = 1200;
 	private float differenceTime;
@@ -167,5 +168,13 @@ void Awake ()
 		PlayerPrefs.SetInt("lifeCount",lifeCount);
 		PlayerPrefs.SetFloat("timerOffline",timerOffline);
 		PlayerPrefs.SetString("currentTIme", DateTime.Now.ToString());
+	}
+	public bool ReturnLVL3()
+	{
+		return lvlUnlock;
+	}
+	public void UnlockLvl()
+	{
+		lvlUnlock = true;
 	}
 }

@@ -245,6 +245,10 @@ void Awake ()
 		}
 		if (ennemyHp.fillAmount == 0f)
 		{
+			if (SceneManager.GetActiveScene().ToString() == "LVL2_Scene")
+			{
+				Life_Manager.Instance().UnlockLvl();
+			}
 			audiomanag.Stop();
 			audio.clip = victorySound;
 		audio.Play();
@@ -351,6 +355,17 @@ void Awake ()
 		{
 			loadingScreen.SetActive(true);
 		StartCoroutine(LoadScreen5());
+		}
+		
+	}
+	public void RetryToPlayLVL3()
+	{
+		audio.clip = clickSound;
+		audio.Play();
+		if (!noLifeIG)
+		{
+			loadingScreen.SetActive(true);
+		StartCoroutine(LoadScreen10());
 		}
 		
 	}
@@ -485,6 +500,12 @@ void Awake ()
 	{
 		yield return new WaitForSeconds(3f);
 		 AsyncOperation async = SceneManager.LoadSceneAsync("LVL2_Scene", LoadSceneMode.Single);
+
+	}
+	IEnumerator LoadScreen10()
+	{
+		yield return new WaitForSeconds(3f);
+		 AsyncOperation async = SceneManager.LoadSceneAsync("LVL3_Scene", LoadSceneMode.Single);
 
 	}
 	IEnumerator LoadScreen6()

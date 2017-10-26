@@ -22,6 +22,8 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject bsConfirm;
 	public GameObject splashScreen;
 	public GameObject loadingScreen;
+	public GameObject buttonLock;
+	public GameObject buttonUnlock;
 
 
 	public AudioClip clickSound, beginSound, shopBuy;
@@ -32,6 +34,7 @@ public class Menu_Manager : MonoBehaviour {
 	private static bool tutoPassed = false;
 	private static bool acceuilPassed = false;
 	private bool noLife = false;
+	private bool lvlUnlock = false;
 
 	private int lifeCount = 3;
 
@@ -66,6 +69,7 @@ void Awake ()
 		DisplayLifes();
 		NoLifes();
 		LoadLifes();
+		lvlUnlock = Life_Manager.Instance().ReturnLVL3();
 	}
 
 	public void PlayOnClick(){
@@ -106,8 +110,27 @@ void Awake ()
 			loadingScreen.SetActive(true);
 			StartCoroutine(LoadScreen());
 		}
-		
 	}
+	public void LvlThree (){
+		audio.clip = clickSound;
+		audio.Play();
+		if (!noLife)
+		{
+			loadingScreen.SetActive(true);
+			StartCoroutine(LoadScreen4());
+		}
+	}
+
+	public void CheckLvl3()
+	{
+		if (lvlUnlock)
+		{
+			buttonLock.SetActive(false);
+			buttonUnlock.SetActive(true);
+		}
+	}
+		
+
 	IEnumerator LoadScreen()
 	{
 		yield return new WaitForSeconds(3f);
@@ -124,6 +147,12 @@ void Awake ()
 	{
 		yield return new WaitForSeconds(3f);
 		 AsyncOperation async = SceneManager.LoadSceneAsync("LVL2_Scene", LoadSceneMode.Single);
+
+	}
+	IEnumerator LoadScreen4()
+	{
+		yield return new WaitForSeconds(3f);
+		 AsyncOperation async = SceneManager.LoadSceneAsync("LVL3_Scene", LoadSceneMode.Single);
 
 	}
 	public void LvlTwo (){
