@@ -686,6 +686,11 @@ Prefab:
       propertyPath: congratPanel
       value: 
       objectReference: {fileID: 1122126172}
+    - target: {fileID: 114618753406603936, guid: 7f7b1f46f8bbfcc458f8f23e7f609e47,
+        type: 2}
+      propertyPath: nolifePanel
+      value: 
+      objectReference: {fileID: 1636642622}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f7b1f46f8bbfcc458f8f23e7f609e47, type: 2}
   m_IsPrefabParent: 0
@@ -1009,6 +1014,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aee5b8dfee0a18c4e8ebbb48eefb3227, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1636642622 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1309791035907044, guid: aee5b8dfee0a18c4e8ebbb48eefb3227,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636642621}
 --- !u!114 &1645299928 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114763679582111624, guid: d20de92cca1c2ca4495b36cf29df8bf0,
