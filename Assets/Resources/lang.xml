@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages>
+	<English>
+
+		<!-- Main menu -->
+		<string name="mainmenu_touchtostart">Touch screen to start</string>
+	
+	</English>
+</languages>

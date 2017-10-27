@@ -9,6 +9,7 @@ public class Life_Manager : MonoBehaviour {
 
 	private bool noLife = false;
 	private bool lvlUnlock = false;
+	private bool returnToShop = false;
 
 	private float timerOffline = 1200;
 	private float differenceTime;
@@ -182,5 +183,17 @@ void Awake ()
 	public void LockLvl()
 	{
 		lvlUnlock = false;
+	}
+	public void TrueToLifeStore()
+	{
+		returnToShop = true;
+	}
+	public void FalseToLifeStore()
+	{
+		returnToShop = false;
+	}
+	public bool ReturnLifeStore()
+	{
+		return returnToShop ;
 	}
 }

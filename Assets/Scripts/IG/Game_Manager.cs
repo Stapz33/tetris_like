@@ -33,6 +33,7 @@ public class Game_Manager : MonoBehaviour {
 	public GameObject confirmQuit;
 	public GameObject loadingScreen;
 	public GameObject congratPanel;
+	public GameObject nolifePanel;
 
 	public Button greenBoost;
 	public Button blueBoost;
@@ -328,7 +329,17 @@ void Awake ()
 			loadingScreen.SetActive(true);
 		StartCoroutine(LoadScreen6());
 		}
+		if (noLifeIG)
+		{
+			nolifePanel.SetActive(true);
+		}
 		
+	}
+	public void CloseNoLife()
+	{
+		audio.clip = clickSound;
+		audio.Play();
+		nolifePanel.SetActive(false);
 	}
 
 	public void OnClickPause(){
@@ -367,6 +378,10 @@ void Awake ()
 			loadingScreen.SetActive(true);
 		StartCoroutine(LoadScreen5());
 		}
+		if (noLifeIG)
+		{
+			nolifePanel.SetActive(true);
+		}
 		
 	}
 	public void RetryToPlayLVL3()
@@ -377,6 +392,10 @@ void Awake ()
 		{
 			loadingScreen.SetActive(true);
 		StartCoroutine(LoadScreen10());
+		}
+		if (noLifeIG)
+		{
+			nolifePanel.SetActive(true);
 		}
 		
 	}
@@ -478,6 +497,15 @@ void Awake ()
 	}
 	public void ReturnToMenu()
 	{
+		audio.clip = clickSound;
+		audio.Play();
+		Time.timeScale = 1;
+		loadingScreen.SetActive(true);
+		StartCoroutine(LoadScreen4());
+	}
+	public void ReturnToLifeShop()
+	{
+		Life_Manager.Instance().TrueToLifeStore();
 		audio.clip = clickSound;
 		audio.Play();
 		Time.timeScale = 1;

@@ -25,6 +25,7 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject buttonLock;
 	public GameObject buttonUnlock;
 	public GameObject resetLvl;
+	public GameObject nolifePanel;
 
 
 	public AudioClip clickSound, beginSound, shopBuy;
@@ -36,6 +37,7 @@ public class Menu_Manager : MonoBehaviour {
 	private static bool acceuilPassed = false;
 	private bool noLife = false;
 	private bool lvlUnlock = false;
+	private bool lifeShopNeed = false;
 
 	private int lifeCount = 3;
 
@@ -72,6 +74,8 @@ void Awake ()
 		LoadLifes();
 		lvlUnlock = Life_Manager.Instance().ReturnLVL3();
 		CheckLvl3();
+		lifeShopNeed = Life_Manager.Instance().ReturnLifeStore();
+		LifeShopNeed();
 	}
 
 	public void PlayOnClick(){
@@ -80,6 +84,19 @@ void Awake ()
 		mainMenu.SetActive(false);
 		boardLevels.SetActive(true);
 		//renseigner le bon nom de scene
+	}
+
+	public void CloseNoLife()
+	{
+		audio.clip = clickSound;
+		audio.Play();
+		nolifePanel.SetActive(false);
+	}
+
+	public void YesNoLife()
+	{
+		nolifePanel.SetActive(false);
+		OpenLifeShop();
 	}
 
 	public void QuitOnClick(){
@@ -112,6 +129,10 @@ void Awake ()
 			loadingScreen.SetActive(true);
 			StartCoroutine(LoadScreen());
 		}
+		if (noLife)
+		{
+			nolifePanel.SetActive(true);
+		}
 	}
 	public void LvlThree (){
 		audio.clip = clickSound;
@@ -120,6 +141,10 @@ void Awake ()
 		{
 			loadingScreen.SetActive(true);
 			StartCoroutine(LoadScreen4());
+		}
+		if (noLife)
+		{
+			nolifePanel.SetActive(true);
 		}
 	}
 
@@ -174,6 +199,10 @@ void Awake ()
 		{
 			loadingScreen.SetActive(true);
 			StartCoroutine(LoadScreen3());
+		}
+		if (noLife)
+		{
+			nolifePanel.SetActive(true);
 		}
 		
 	}
@@ -289,6 +318,7 @@ void Awake ()
 	{
 		audio.clip = clickSound;
 		audio.Play();
+		Life_Manager.Instance().FalseToLifeStore();
 		lifeShopPanel.SetActive(false);
 	}
 	public void BuyLife()
@@ -335,6 +365,15 @@ void Awake ()
 	{
 		splashScreen.SetActive(false);
 		audioMain.Play();
+	}
+	public void LifeShopNeed()
+	{
+		if (lifeShopNeed)
+		{
+			mainMenu.SetActive(false);
+			boardLevels.SetActive(true);
+			lifeShopPanel.SetActive(true);
+		}
 	}
 
 }
