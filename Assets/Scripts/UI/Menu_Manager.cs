@@ -26,6 +26,8 @@ public class Menu_Manager : MonoBehaviour {
 	public GameObject buttonUnlock;
 	public GameObject resetLvl;
 	public GameObject nolifePanel;
+	public GameObject frenchPanel;
+	public GameObject englishPanel;
 
 
 	public AudioClip clickSound, beginSound, shopBuy;
@@ -38,6 +40,7 @@ public class Menu_Manager : MonoBehaviour {
 	private bool noLife = false;
 	private bool lvlUnlock = false;
 	private bool lifeShopNeed = false;
+	private bool languagePanel = false;
 
 	private int lifeCount = 3;
 
@@ -375,5 +378,21 @@ void Awake ()
 			lifeShopPanel.SetActive(true);
 		}
 	}
-
+	public void ChangeMenuLanguage()
+	{
+		if (!languagePanel)
+		{
+			frenchPanel.SetActive(false);
+			englishPanel.SetActive(true);
+			languagePanel = true;
+			return ;
+		}
+		if (languagePanel)
+		{
+			frenchPanel.SetActive(true);
+			englishPanel.SetActive(false);
+			languagePanel = false;
+			return ;
+		}
+	}
 }

@@ -5285,7 +5285,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b007d2701f392c14484169276c00e69d, type: 3}
-    m_FontSize: 72
+    m_FontSize: 68
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -5297,7 +5297,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Les gemmes rouges vous permettent d'infliger des d\xE9gats \xE0 la sant\xE9
-    de votre ennemi, essayez donc de faire une combinaison de 3 gemmes !"
+    de votre ennemi, essayez donc de faire une combinaison de 3 gemmes <color=red>rouges</color>
+    !"
 --- !u!222 &1041080972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7314,7 +7315,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b007d2701f392c14484169276c00e69d, type: 3}
-    m_FontSize: 84
+    m_FontSize: 78
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -7326,7 +7327,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Les gemmes vertes vous permettent de regagner de la vie, essayez donc de
-    faire une combinaison de 3 gemmes  !
+    faire une combinaison de 3 gemmes <color=green>vertes</color>  !
 --- !u!222 &1718461174
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8216,7 +8217,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b007d2701f392c14484169276c00e69d, type: 3}
-    m_FontSize: 83
+    m_FontSize: 81
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -8228,7 +8229,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Les gemmes bleues vous permettent d'infliger des d\xE9gats au bouclier
-    de votre ennemi, essayez donc de faire une combinaison de 3 gemmes !"
+    de votre ennemi, essayez donc de faire une combinaison de 3 gemmes <color=blue>bleus</color>
+    !"
 --- !u!222 &1851015591
 CanvasRenderer:
   m_ObjectHideFlags: 0

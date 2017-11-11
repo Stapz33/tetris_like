@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <languages>
+	<French>
+
+		<!-- Main menu -->
+		<string name="return_main_menu">RETOUR</string>
+		<string name="shop_main_menu">BOUTIQUE</string>
+		<string name="lshop_main_menu">+</string>
+		<string name="HTP_main_menu">COMMENT JOUER</string>
+		<string name="ASK_Tuto">Voulez-vous voir le tutoriel ?</string>
+		<string name="Accept_Button">OUI</string>
+		<string name="Decline_Button">NON</string>
+		<string name="Restauration_Confirm">Vous avez bien restauré vos vies</string>
+
+
+
+	</French>
+
 	<English>
 
 		<!-- Main menu -->
-		<string name="mainmenu_touchtostart">Touch screen to start</string>
+		<string name="return_main_menu">RETURN</string>
+		<string name="shop_main_menu">SHOP</string>
+		<string name="lshop_main_menu">+</string>
+		<string name="HTP_main_menu">HOW TO PLAY</string>
+		<string name="ASK_Tuto">Do you want to do the tutorial ?</string>
+		<string name="Accept_Button">YES</string>
+		<string name="Decline_Button">NO</string>
+		<string name="Restauration_Confirm">You have successfully restored your lives</string>
 	
 	</English>
+
 </languages>

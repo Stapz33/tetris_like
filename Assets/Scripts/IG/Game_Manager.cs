@@ -238,7 +238,7 @@ void Awake ()
 		{
 			audiomanag.Stop();
 			audio.clip = defeatSound;
-		audio.Play();
+			audio.Play();
 			losePanel.SetActive(true);
 			endGame = true;
 			Life_Manager.Instance().SubstractLife();
